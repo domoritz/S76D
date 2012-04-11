@@ -1,0 +1,48 @@
+NET "clk" LOC = T9;
+NET "mmc_clock" LOC = D10;
+NET "mmc_cs" LOC = D7;
+NET "mmc_miso" LOC = B4;
+NET "mmc_mosi" LOC = D8;
+NET "reset" LOC = L14;
+NET "leds[0]" LOC = K12;
+NET "leds[1]" LOC = P14;
+NET "leds[2]" LOC = L12;
+NET "leds[3]" LOC = N14;
+NET "leds[4]" LOC = P13;
+NET "leds[5]" LOC = N12;
+NET "leds[6]" LOC = P12;
+NET "leds[7]" LOC = P11;
+
+NET "segment_data[7]" LOC = E14;
+NET "segment_data[6]" LOC = G13;
+NET "segment_data[5]" LOC = N15;
+NET "segment_data[4]" LOC = P15;
+NET "segment_data[3]" LOC = R16;
+NET "segment_data[2]" LOC = F13;
+NET "segment_data[1]" LOC = N16;
+NET "segment_data[0]" LOC = P16;
+
+NET "segment_addr[0]" LOC = D14;
+NET "segment_addr[1]" LOC = G14;
+NET "segment_addr[2]" LOC = F14;
+NET "segment_addr[3]" LOC = E13;
+
+#NET "read_fifo" LOC = M13;
+#NET "mode_fifo1" LOC = M14;
+#NET "mode_fifo2" LOC = L13;
+
+NET "dacclk" LOC = D5;
+NET "dacdata" LOC = D6;
+NET "dacload" LOC = E7;
+
+NET "kbdata" LOC = M15;
+NET "kbclk" LOC = M16;
+
+NET "switches[0]" LOC = F12;
+NET "switches[1]" LOC = G12;
+NET "switches[2]" LOC = H14;
+NET "switches[3]" LOC = H13;
+NET "switches[4]" LOC = J14;
+NET "switches[5]" LOC = J13;
+NET "switches[6]" LOC = K14;
+NET "switches[7]" LOC = K13;
