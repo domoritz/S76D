@@ -14,3 +14,7 @@ Working but needs documentation.
 
 ## Tested on this hardware ##
 * Xilinx Spartan 3 FPGA board
+
+## Developer ##
+* Kai Fabian
+* Dominik Moritz
