@@ -15,8 +15,8 @@
 -- Revision: 
 -- Revision 0.01 - File Created
 -- Additional Comments: 
---		koennte interessant sein http://stackoverflow.com/questions/2365897/initializing-sd-card-in-spi-issues
---		simpel: http://www.nawattlabs.com/index.php?option=com_content&view=article&id=26%3Asd-mmc-programming&catid=9%3Ablog&Itemid=5&showall=1
+--		might be interesting http://stackoverflow.com/questions/2365897/initializing-sd-card-in-spi-issues
+--		simple: http://www.nawattlabs.com/index.php?option=com_content&view=article&id=26%3Asd-mmc-programming&catid=9%3Ablog&Itemid=5&showall=1
 ----------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;

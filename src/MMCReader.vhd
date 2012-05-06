@@ -15,7 +15,7 @@
 -- Revision: 
 -- Revision 0.007 - File Created
 -- Additional Comments: 
--- 	interessant: 
+-- 	interesting: 
 -- 	http://www.mikrocontroller.net/articles/MMC-_und_SD-Karten
 --
 ----------------------------------------------------------------------------------

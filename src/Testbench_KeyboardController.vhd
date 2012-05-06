@@ -1,10 +1,10 @@
 --------------------------------------------------------------------------------
 -- Company: 
--- Engineer:
+-- Engineer:  Dominik Moritz, Kai Fabian
 --
 -- Create Date:   13:34:35 07/15/2011
 -- Design Name:   
--- Module Name:   F:/DropboxVHDL/VHDLProjekt/Testbench_KeyboardController.vhd
+-- Module Name:   Testbench_KeyboardController.vhd
 -- Project Name:  VHDLProjekt
 -- Target Device:  
 -- Tool versions:  

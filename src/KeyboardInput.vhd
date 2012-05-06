@@ -8,13 +8,13 @@
 -- Project Name: 
 -- Target Devices: 
 -- Tool versions: 
--- Description: Eingabemodul fuer das Keyboard
+-- Description: Input module for keyboard
 --
--- Dependencies: keine
+-- Dependencies: none
 --
 -- Revision: 
 -- Revision 0.01 - File Created
--- Additional Comments: ungetestet!
+-- Additional Comments: untested!
 --
 ----------------------------------------------------------------------------------
 library IEEE;

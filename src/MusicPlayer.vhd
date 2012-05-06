@@ -1,6 +1,6 @@
 ----------------------------------------------------------------------------------
 -- Company: 
--- Engineer: 
+-- Engineer:  Dominik Moritz, Kai Fabian
 -- 
 -- Create Date:    14:58:50 03/25/2012 
 -- Design Name: 

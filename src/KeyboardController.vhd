@@ -9,11 +9,10 @@
 -- (_)(_)  |/     \|(_______/|/     \|   )_(   (_______)|/    )_)(_______)  (_)(_) --
 --                                                                                 --
 --                                                                                 --
--- (OBSOLETE) ready nur bei falling_edge auswerten!                                --
--- ready nur bei rising_edge auswerten!                                            --
+-- evaluate ready on rising_edge!                                                  --
 -------------------------------------------------------------------------------------
 -- Company: 
--- Engineer: 
+-- Engineer:  Dominik Moritz, Kai Fabian
 -- 
 -- Create Date:    10:39:10 07/15/2011 
 -- Design Name: 

@@ -1,6 +1,6 @@
 ----------------------------------------------------------------------------------
 -- Company:    High Professional Inventions (HPI)
--- Engineer:   Dr. Fritz Walther
+-- Engineer:    Dominik Moritz, Kai Fabian
 -- 
 -- Create Date:    10:01:27 07/08/2011 
 -- Design Name:    Clock divisor

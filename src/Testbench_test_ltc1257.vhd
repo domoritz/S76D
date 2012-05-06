@@ -1,10 +1,10 @@
 --------------------------------------------------------------------------------
 -- Company: 
--- Engineer:
+-- Engineer:  Dominik Moritz, Kai Fabian
 --
 -- Create Date:   12:56:01 09/09/2011
 -- Design Name:   
--- Module Name:   F:/DropboxVHDL/S76D/Testbench_test_ltc1257.vhd
+-- Module Name:   Testbench_test_ltc1257.vhd
 -- Project Name:  S76D
 -- Target Device:  
 -- Tool versions:  

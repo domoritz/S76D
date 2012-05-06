@@ -1,10 +1,10 @@
 --------------------------------------------------------------------------------
 -- Company: 
--- Engineer:
+-- Engineer:  Dominik Moritz, Kai Fabian
 --
 -- Create Date:   10:45:12 09/12/2011
 -- Design Name:   
--- Module Name:   Z:/Dropbox/HPI/VHDL/S76D/Testbench_mmccontroller.vhd
+-- Module Name:   Testbench_mmccontroller.vhd
 -- Project Name:  S76D
 -- Target Device:  
 -- Tool versions:  
