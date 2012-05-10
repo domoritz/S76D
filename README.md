@@ -23,7 +23,7 @@ Demo video on [YouTube](http://www.youtube.com/watch?v=qsjFVgriZzY).
 ## Documentation ##
 Can be found in `docs`.
 
-* Easy to understand [Introduction to MMC/SD Cards (German)](http://www.ifas.htwk-leipzig.de/easytoweb/download/D\x26E_11_2006_Anbindung_von_SD-Karten.pdf) (currently offline)
+* Easy to understand [Introduction to MMC/SD Cards (German)](http://www.ifas.htwk-leipzig.de/easytoweb/download/D&E_11_2006_Anbindung_von_SD-Karten.pdf)
 * Samsung's [MMC Product Datasheet](http://html.alldatasheet.com/html-pdf/141187/SAMSUNG/MC2GH512NMCA-2SA00/305/1/MC2GH512NMCA-2SA00.html) which is really helpful and a great reference.
 
 
