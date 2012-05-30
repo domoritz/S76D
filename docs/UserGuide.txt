@@ -1,0 +1,26 @@
+Display Modes which can be canged with the switches
+
+--------------------------------------------
+
+Mode: --------
+7-Segment Display: Number of song from MMC card
+LED: LD0=0: music is playing
+     LD0=1: music paused
+
+
+Mode: -------x
+7-Segment Display: current sample
+LED: Shows state of state machine for initializer and reader
+
+Mode: ------x-
+LED: Shows state of state machine for initializer and reader
+
+Mode: -----x--
+7-Segment Display: KB Scancode
+LED: LD7 to LD2: Keyboard Debug
+     LD1=1:      Keyboard Extend
+     LD0=1:      Keyboard Break
+	 
+All other modes:
+7-Segment Display: shows the text AFFE (German for monkey)
+LED: shows Moebius band animation
