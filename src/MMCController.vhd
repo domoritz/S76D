@@ -1,6 +1,6 @@
 ----------------------------------------------------------------------------------
--- Company:  Ha Pe Ieh
--- Engineer: Dominik Moritz, Kai Fabian
+-- Company: Hasso Plattner Institute (HPI) Potsdam
+-- Engineer:  Dominik Moritz, Kai Fabian
 -- 
 -- Create Date:    14:06:10 09/09/2011 
 -- Design Name: 

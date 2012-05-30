@@ -1,5 +1,5 @@
 ----------------------------------------------------------------------------------
--- Company: 
+-- Company: Hasso Plattner Institute (HPI) Potsdam
 -- Engineer:  Dominik Moritz, Kai Fabian
 -- 
 -- Create Date:    10:11:42 07/08/2011 

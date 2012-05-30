@@ -1,6 +1,6 @@
 ----------------------------------------------------------------------------------
--- Company:    High Professional Inventions (HPI)
--- Engineer:    Dominik Moritz, Kai Fabian
+-- Company: Hasso Plattner Institute (HPI) Potsdam
+-- Engineer:  Dominik Moritz, Kai Fabian
 -- 
 -- Create Date:    10:01:27 07/08/2011 
 -- Design Name:    Clock divisor

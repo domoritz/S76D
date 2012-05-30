@@ -1,6 +1,6 @@
 ----------------------------------------------------------------------------------
--- Company:  Ha Pe Ieh
--- Engineer: Dominik Moritz feat. whomever
+-- Company: Hasso Plattner Institute (HPI) Potsdam
+-- Engineer:  Dominik Moritz, Kai Fabian
 -- 
 -- Create Date:    00:32:56 07/21/2011 
 -- Design Name: 
