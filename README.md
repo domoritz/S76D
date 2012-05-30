@@ -8,7 +8,7 @@ The dream of every geeky hardware hacker has come true. We build a working MMC/S
 
 This Project started as a student project a few months ago and today we were able to play the first song. Hope you like it as much as we enjoyed finally hearing the board singing.
 
-If you want to know a little bit (:-P) more about the project or see nice picures go to [http://www.domoritz.de/2012/03/singing_vhdl_board/](this blog post) (German)
+If you want to know a little bit (:-P) more about the project or see nice picures go to [this blog post](http://www.domoritz.de/2012/03/singing_vhdl_board/) (German)
 
 Demo video on [YouTube](http://www.youtube.com/watch?v=qsjFVgriZzY).
 
@@ -23,8 +23,7 @@ Demo video on [YouTube](http://www.youtube.com/watch?v=qsjFVgriZzY).
 ## Documentation ##
 Can be found in `docs`.
 
-* Easy to understand [Introduction to MMC/SD Cards (German)
-](http://www.ifas.htwk-leipzig.de/easytoweb/download/D\x26E_11_2006_Anbindung_von_SD-Karten.pdf)
+* Easy to understand [Introduction to MMC/SD Cards (German)](http://www.ifas.htwk-leipzig.de/easytoweb/download/D&E_11_2006_Anbindung_von_SD-Karten.pdf)
 * Samsung's [MMC Product Datasheet](http://html.alldatasheet.com/html-pdf/141187/SAMSUNG/MC2GH512NMCA-2SA00/305/1/MC2GH512NMCA-2SA00.html) which is really helpful and a great reference.
 
 
