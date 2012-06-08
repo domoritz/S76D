@@ -1,5 +1,5 @@
 Display Modes which can be canged with the switches
-
+on the board
 --------------------------------------------
 
 Mode: --------
@@ -24,3 +24,17 @@ LED: LD7 to LD2: Keyboard Debug
 All other modes:
 7-Segment Display: shows the text AFFE (German for monkey)
 LED: shows Moebius band animation
+
+
+
+How to use the Keyboard
+---------------------------------------------
+
+You can use the keyboard to play or pause a song, choose a 
+song (number) or play the piano. 
+
+Play/Pause: use the Esc Key
+
+Select song number (only while in pause mode): press F1 to F8
+
+Piano: use the lower character keys on the keyboard
