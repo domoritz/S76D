@@ -36,7 +36,7 @@ Working but needs documentation.
 * MMC (multimedia card)
 
 ## Tested on this hardware ##
-* Xilinx Spartan 3 FPGA board
+* Spartan-3 Starter Kit Board (Digilent Inc.), with Xilinx Spartan 3 FPGA (200k gates)
 
 ## Developer ##
 * Kai Fabian
