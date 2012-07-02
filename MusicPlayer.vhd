@@ -21,6 +21,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.STD_LOGIC_ARITH.ALL;
 use IEEE.STD_LOGIC_UNSIGNED.ALL;
+use IEEE.NUMERIC_BIT.ALL;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -49,9 +50,8 @@ entity MusicPlayer is
 			  
 			  reset : in STD_LOGIC;
 			  
---			  read_fifo : in STD_LOGIC;
---			  mode_fifo1 : in STD_LOGIC;
---			  mode_fifo2 : in STD_LOGIC;
+			  vol_up : in STD_LOGIC;
+			  vol_down : in STD_LOGIC;
 			  
 			  dacclk : out STD_LOGIC;
 			  dacdata : out STD_LOGIC;
@@ -113,17 +113,17 @@ signal is_playing : STD_LOGIC;
 
 signal start_address : STD_LOGIC_VECTOR(31 downto 0) := (others => '0');
 
+signal tone : STD_LOGIC_VECTOR(11 downto 0);
+signal tone_code : STD_LOGIC_VECTOR(5 downto 0);
+signal tone_volume : Integer Range 0 to 7 := 4;
+signal tone_playing : STD_LOGIC := '0';
+
+signal key_pressed : STD_LOGIC := '0';
+
+signal vol_up_ff : STD_LOGIC_VECTOR(1 downto 0) := "00";
+signal vol_down_ff : STD_LOGIC_VECTOR(1 downto 0) := "00";
+
 begin
---entity KeyboardController is Port(
---			  kbclk : in  STD_LOGIC;
---           kbdata : in  STD_LOGIC;
---           reset : in  STD_LOGIC;
---           clk : in  STD_LOGIC;
---           scancode : out  STD_LOGIC_VECTOR (7 downto 0);
---			  break : out STD_LOGIC;
---			  extend : out STD_LOGIC;
---           ready : out  STD_LOGIC
---	);
 	
 	Keyboard : entity Work.KeyboardController Port Map (
 		debug => kb_debug,
@@ -190,6 +190,18 @@ begin
 		segbus => segment_data,
 		chipclk => clk
 	);
+	
+	ScancodeConverter : entity Work.ScancodeTonecodeConverter Port Map (
+		scancode => kb_scancode,
+		tonecode => tone_code,
+		clk => clk
+	);
+	
+	Synthesizer : entity Work.RectWaveSynth Port Map (
+		tone => tone_code,
+		clk => clk,
+		audio => tone_playing
+	);
 
 	AudioClockDivider : entity Work.ClockDivisor Port Map (1134, clk, audio_clk);
 
@@ -197,25 +209,39 @@ begin
 	
 	wave_word <= fifo_dout(7 downto 0) & fifo_dout(15 downto 8);
 	pcm_word <= (wave_word + 32768);
-	dac_data <= pcm_word(15 downto 4);
+	dac_data <= pcm_word(15 downto 5) + tone(11 downto 0);
 	fifo_rd_clk <= not audio_clk;
 	fifo_rd_en <= is_playing;
 	
 	dac_load <= audio_clk;
 	
+	key_pressed <= not kb_break;
+	
 	----seg_num <= X"00" & kb_scancode;
 	----leds <= kb_scancode;
 	
 	debug_output : process (clk, switches)
+	variable tmp : STD_LOGIC_VECTOR(6 downto 0);
 	begin
+		
+		case tone_volume is
+			when 7 		 => tmp := "1111111";
+			when 6 		 => tmp := "0111111";
+			when 5 		 => tmp := "0011111";
+			when 4 		 => tmp := "0001111";
+			when 3 		 => tmp := "0000111";
+			when 2 		 => tmp := "0000011";
+			when 1		 => tmp := "0000001";
+			when others	 => tmp := "0000000";
+		end case;
 		
 		if rising_edge(clk) then
 			if switches = X"00" then
 				seg_num <= X"00" & song_number;
 				if (state = ps_playing) then
-					leds <= (0 => '1', others => '0');
+					leds <= tmp & "1";
 				else
-					leds <= (0 => '0', others => '0');
+					leds <= tmp & "0";
 				end if;
 			elsif switches = X"01" then
 				seg_num <= fifo_dout;
@@ -233,6 +259,50 @@ begin
 		end if;
 		
 	end process debug_output;
+	
+	-- why moebius clk? it was just along and is slow enough!
+	volume_p : process (moebius_clk, tone_volume)
+	begin
+		
+		if rising_edge(moebius_clk) then
+			vol_up_ff <= vol_up_ff(0) & vol_up;
+			vol_down_ff <= vol_down_ff(0) & vol_down;
+			
+			if vol_down_ff = "01" then
+				if tone_volume > 0 then
+					tone_volume <= tone_volume - 1;
+				end if;
+			elsif vol_up_ff = "01" then
+				if tone_volume < 7 then
+					tone_volume <= tone_volume + 1;
+				end if;
+			end if;
+			
+		end if;
+		
+		if (tone_playing = '1') and (key_pressed = '1') then
+			case tone_volume is
+				when 1 =>
+					tone <= "000000000111";
+				when 2 =>
+					tone <= "000000011111";
+				when 3 =>
+					tone <= "000001111111";
+				when 4 =>
+					tone <= "000011111111";
+				when 5 =>
+					tone <= "000111111111";
+				when 6 =>
+					tone <= "001111111111";
+				when 7 =>
+					tone <= "011111111111";
+				when others =>
+					tone <= "000000000000";
+			end case;
+		else
+			tone <= (others => '0');
+		end if;
+	end process volume_p;
 	
 	moebius : process (moebius_clk)
 	begin

@@ -32,7 +32,8 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity ScancodeTonecodeConverter is
     Port ( scancode : in  STD_LOGIC_VECTOR (7 downto 0);
            tonecode : out  STD_LOGIC_VECTOR (5 downto 0);
-			  clk : in STD_LOGIC);
+			  clk : in STD_LOGIC
+			);
 end ScancodeTonecodeConverter;
 
 architecture Behavioral of ScancodeTonecodeConverter is

@@ -1,0 +1,35 @@
+NET "clk" LOC = T9;
+NET "mmc_clock" LOC = D10;
+NET "mmc_cs" LOC = D7;
+NET "mmc_miso" LOC = B4;
+NET "mmc_mosi" LOC = D8;
+NET "led_out[0]" LOC = K12;
+NET "led_out[1]" LOC = P14;
+NET "led_out[2]" LOC = L12;
+NET "led_out[3]" LOC = N14;
+NET "led_out[4]" LOC = P13;
+NET "led_out[5]" LOC = N12;
+NET "led_out[6]" LOC = P12;
+NET "led_out[7]" LOC = P11;
+
+NET "led_out2[7]" LOC = E14;
+NET "led_out2[6]" LOC = G13;
+NET "led_out2[5]" LOC = N15;
+NET "led_out2[4]" LOC = P15;
+NET "led_out2[3]" LOC = R16;
+NET "led_out2[2]" LOC = F13;
+NET "led_out2[1]" LOC = N16;
+NET "led_out2[0]" LOC = P16;
+
+NET "led_outaddr2[0]" LOC = D14;
+NET "led_outaddr2[1]" LOC = G14;
+NET "led_outaddr2[2]" LOC = F14;
+NET "led_outaddr2[3]" LOC = E13;
+
+NET "read_fifo" LOC = M13;
+NET "mode_fifo1" LOC = M14;
+NET "mode_fifo2" LOC = L13;
+
+NET "dacclk" LOC = D5;
+NET "dacdata" LOC = D6;
+NET "dacload" LOC = E7;
