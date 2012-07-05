@@ -1,0 +1,1339 @@
+Release 13.1 - xst O.40d (nt)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Reading design: MusicPlayer.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "MusicPlayer.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "MusicPlayer"
+Output Format                      : NGC
+Target Device                      : xc3s200-4-ft256
+
+---- Source Options
+Top Module Name                    : MusicPlayer
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "//fs2/kai.fabian$/Profile/Documents/GitHub/S76D/src/ClockDivisor.vhd" in Library work.
+Architecture behavioral of Entity clockdivisor is up to date.
+Compiling vhdl file "//fs2/kai.fabian$/Profile/Documents/GitHub/S76D/src/functions.vhd" in Library work.
+Architecture functions of Entity functions is up to date.
+Compiling vhdl file "//fs2/kai.fabian$/Profile/Documents/GitHub/S76D/src/MMCInitializer.vhd" in Library work.
+Architecture behavioral of Entity mmcinitializer is up to date.
+Compiling vhdl file "//fs2/kai.fabian$/Profile/Documents/GitHub/S76D/src/MMCReader.vhd" in Library work.
+Architecture behavioral of Entity mmcreader is up to date.
+Compiling vhdl file "//fs2/kai.fabian$/Profile/Documents/GitHub/S76D/src/KeyboardInput.vhd" in Library work.
+Architecture behavioral of Entity keyboardinput is up to date.
+Compiling vhdl file "//fs2/kai.fabian$/Profile/Documents/GitHub/S76D/src/KeyboardController.vhd" in Library work.
+Architecture behavioral of Entity keyboardcontroller is up to date.
+Compiling vhdl file "//fs2/kai.fabian$/Profile/Documents/GitHub/S76D/src/ltc1257.vhd" in Library work.
+Architecture behavioral of Entity ltc1257 is up to date.
+Compiling vhdl file "//fs2/kai.fabian$/Profile/Documents/GitHub/S76D/src/ipcore_dir/mmc_fifo.vhd" in Library work.
+Architecture mmc_fifo_a of Entity mmc_fifo is up to date.
+Compiling vhdl file "//fs2/kai.fabian$/Profile/Documents/GitHub/S76D/src/MMCController.vhd" in Library work.
+Architecture behavioral of Entity mmccontroller is up to date.
+Compiling vhdl file "//fs2/kai.fabian$/Profile/Documents/GitHub/S76D/src/SegmentDisplay.vhd" in Library work.
+Architecture behavioral of Entity segmentdisplay is up to date.
+Compiling vhdl file "//fs2/kai.fabian$/Profile/Documents/GitHub/S76D/src/ScancodeTonecodeConverter.vhd" in Library work.
+Architecture behavioral of Entity scancodetonecodeconverter is up to date.
+Compiling vhdl file "//fs2/kai.fabian$/Profile/Documents/GitHub/S76D/src/RectWaveSynth.vhd" in Library work.
+Entity <RectWaveSynth> compiled.
+Entity <RectWaveSynth> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "//fs2/kai.fabian$/Profile/Documents/GitHub/S76D/src/MusicPlayer.vhd" in Library work.
+Entity <MusicPlayer> (Architecture <Behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <MusicPlayer> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <KeyboardController> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <ltc1257> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <MMCController> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <SegmentDisplay> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <ScancodeTonecodeConverter> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <RectWaveSynth> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <ClockDivisor> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <KeyboardInput> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <MMCInitializer> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <MMCReader> in library <work> (architecture <Behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <MusicPlayer> in library <work> (Architecture <Behavioral>).
+WARNING:Xst:753 - "//fs2/kai.fabian$/Profile/Documents/GitHub/S76D/src/MusicPlayer.vhd" line 141: Unconnected output port 'ready' of component 'ltc1257'.
+WARNING:Xst:2211 - "//fs2/kai.fabian$/Profile/Documents/GitHub/S76D/src/MusicPlayer.vhd" line 150: Instantiating black box module <mmc_fifo>.
+WARNING:Xst:819 - "//fs2/kai.fabian$/Profile/Documents/GitHub/S76D/src/MusicPlayer.vhd" line 223: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <tone_volume>
+WARNING:Xst:819 - "//fs2/kai.fabian$/Profile/Documents/GitHub/S76D/src/MusicPlayer.vhd" line 264: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <tone_playing>, <key_pressed>
+Entity <MusicPlayer> analyzed. Unit <MusicPlayer> generated.
+
+Analyzing Entity <KeyboardController> in library <work> (Architecture <Behavioral>).
+Entity <KeyboardController> analyzed. Unit <KeyboardController> generated.
+
+Analyzing Entity <KeyboardInput> in library <work> (Architecture <Behavioral>).
+Entity <KeyboardInput> analyzed. Unit <KeyboardInput> generated.
+
+Analyzing Entity <ltc1257> in library <work> (Architecture <Behavioral>).
+Entity <ltc1257> analyzed. Unit <ltc1257> generated.
+
+Analyzing Entity <MMCController> in library <work> (Architecture <Behavioral>).
+Entity <MMCController> analyzed. Unit <MMCController> generated.
+
+Analyzing Entity <MMCInitializer> in library <work> (Architecture <Behavioral>).
+Entity <MMCInitializer> analyzed. Unit <MMCInitializer> generated.
+
+Analyzing Entity <MMCReader> in library <work> (Architecture <Behavioral>).
+INFO:Xst:2679 - Register <debug> in unit <MMCReader> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <mmc_receive_bk> in unit <MMCReader> has a constant value of 1111111111111111 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <receive_counter> in unit <MMCReader> has a constant value of 0 during circuit operation. The register is replaced by logic.
+Entity <MMCReader> analyzed. Unit <MMCReader> generated.
+
+Analyzing Entity <SegmentDisplay> in library <work> (Architecture <Behavioral>).
+INFO:Xst:1561 - "//fs2/kai.fabian$/Profile/Documents/GitHub/S76D/src/functions.vhd" line 62: Mux is complete : default of case is discarded
+INFO:Xst:1561 - "//fs2/kai.fabian$/Profile/Documents/GitHub/S76D/src/functions.vhd" line 62: Mux is complete : default of case is discarded
+INFO:Xst:1561 - "//fs2/kai.fabian$/Profile/Documents/GitHub/S76D/src/functions.vhd" line 62: Mux is complete : default of case is discarded
+INFO:Xst:1561 - "//fs2/kai.fabian$/Profile/Documents/GitHub/S76D/src/functions.vhd" line 62: Mux is complete : default of case is discarded
+INFO:Xst:1561 - "//fs2/kai.fabian$/Profile/Documents/GitHub/S76D/src/SegmentDisplay.vhd" line 118: Mux is complete : default of case is discarded
+WARNING:Xst:819 - "//fs2/kai.fabian$/Profile/Documents/GitHub/S76D/src/SegmentDisplay.vhd" line 97: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <seg0>, <seg1>, <seg2>, <seg3>
+Entity <SegmentDisplay> analyzed. Unit <SegmentDisplay> generated.
+
+Analyzing Entity <ScancodeTonecodeConverter> in library <work> (Architecture <Behavioral>).
+Entity <ScancodeTonecodeConverter> analyzed. Unit <ScancodeTonecodeConverter> generated.
+
+Analyzing Entity <RectWaveSynth> in library <work> (Architecture <Behavioral>).
+Entity <RectWaveSynth> analyzed. Unit <RectWaveSynth> generated.
+
+Analyzing Entity <ClockDivisor> in library <work> (Architecture <Behavioral>).
+Entity <ClockDivisor> analyzed. Unit <ClockDivisor> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+INFO:Xst:2679 - Register <debug_data> in unit <MMCReader> has a constant value of 11111111 during circuit operation. The register is replaced by logic.
+
+Synthesizing Unit <ScancodeTonecodeConverter>.
+    Related source file is "//fs2/kai.fabian$/Profile/Documents/GitHub/S76D/src/ScancodeTonecodeConverter.vhd".
+    Found 6-bit register for signal <tonecode>.
+    Summary:
+	inferred   6 D-type flip-flop(s).
+Unit <ScancodeTonecodeConverter> synthesized.
+
+
+Synthesizing Unit <ClockDivisor>.
+    Related source file is "//fs2/kai.fabian$/Profile/Documents/GitHub/S76D/src/ClockDivisor.vhd".
+    Found 1-bit register for signal <outclk>.
+    Found 32-bit down counter for signal <zaehler>.
+    Found 32-bit comparator greatequal for signal <zaehler$cmp_ge0000> created at line 48.
+    Found 26-bit subtractor for signal <zaehler$sub0000> created at line 50.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   1 Comparator(s).
+Unit <ClockDivisor> synthesized.
+
+
+Synthesizing Unit <KeyboardInput>.
+    Related source file is "//fs2/kai.fabian$/Profile/Documents/GitHub/S76D/src/KeyboardInput.vhd".
+    Found 2-bit register for signal <qclk>.
+    Found 11-bit register for signal <qscan>.
+    Summary:
+	inferred  13 D-type flip-flop(s).
+Unit <KeyboardInput> synthesized.
+
+
+Synthesizing Unit <MMCInitializer>.
+    Related source file is "//fs2/kai.fabian$/Profile/Documents/GitHub/S76D/src/MMCInitializer.vhd".
+WARNING:Xst:647 - Input <work_clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <mmc_state> of Case statement line 79 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <mmc_state> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+    Using one-hot encoding for signal <mmc_state>.
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <mmc_state> of Case statement line 111 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <mmc_state> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <mmc_state> of Case statement line 111 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <mmc_state> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+    Found 1-bit register for signal <fast_clock>.
+    Found 8-bit register for signal <current_state>.
+    Found 8-bit register for signal <status>.
+    Found 1-bit register for signal <ready>.
+    Found 1-bit tristate buffer for signal <mmc_mosi>.
+    Found 1-bit tristate buffer for signal <mmc_cs>.
+    Found 1-bit register for signal <debug>.
+    Found 49-bit register for signal <mmc_cmd0>.
+    Found 49-bit comparator equal for signal <mmc_cmd0$cmp_eq0002> created at line 132.
+    Found 49-bit 4-to-1 multiplexer for signal <mmc_cmd0$mux0001>.
+    Found 49-bit register for signal <mmc_cmd1>.
+    Found 49-bit comparator equal for signal <mmc_cmd1$cmp_eq0002> created at line 174.
+    Found 49-bit 4-to-1 multiplexer for signal <mmc_cmd1$mux0001>.
+    Found 49-bit register for signal <mmc_cmd16>.
+    Found 49-bit comparator equal for signal <mmc_cmd16$cmp_eq0002> created at line 260.
+    Found 49-bit 4-to-1 multiplexer for signal <mmc_cmd16$mux0001>.
+    Found 16-bit register for signal <mmc_cmd16_wait>.
+    Found 8-bit register for signal <mmc_cmd1_wait>.
+    Found 12-bit register for signal <mmc_init_wait_counter>.
+    Found 12-bit subtractor for signal <mmc_init_wait_counter$addsub0000> created at line 124.
+    Found 10-bit register for signal <mmc_new_state>.
+    Found 8-bit register for signal <mmc_receive_rt>.
+    Found 10-bit register for signal <mmc_state>.
+    Found 1-bit register for signal <Mtridata_mmc_cs> created at line 117.
+    Found 1-bit register for signal <Mtridata_mmc_mosi> created at line 118.
+    Found 49-bit comparator equal for signal <Mtridata_mmc_mosi$cmp_eq0001> created at line 133.
+    Found 49-bit comparator equal for signal <Mtridata_mmc_mosi$cmp_eq0002> created at line 175.
+    Found 49-bit comparator equal for signal <Mtridata_mmc_mosi$cmp_eq0003> created at line 261.
+    Found 1-bit register for signal <Mtrien_mmc_cs> created at line 117.
+    Found 1-bit register for signal <Mtrien_mmc_mosi> created at line 118.
+    Summary:
+	inferred 234 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   6 Comparator(s).
+	inferred 147 Multiplexer(s).
+	inferred   2 Tristate(s).
+Unit <MMCInitializer> synthesized.
+
+
+Synthesizing Unit <MMCReader>.
+    Related source file is "//fs2/kai.fabian$/Profile/Documents/GitHub/S76D/src/MMCReader.vhd".
+WARNING:Xst:647 - Input <work_clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <fifo_full> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:646 - Signal <receive_counter<0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <read_counter> is used but never assigned. This sourceless signal will be automatically connected to value 0000000000000.
+WARNING:Xst:1780 - Signal <mmc_work_clock> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <mmc_receive_bk> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <mmc_clk_divider> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <debug_data> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <debug> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found finite state machine <FSM_0> for signal <fifo_state>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 5                                              |
+    | Inputs             | 1                                              |
+    | Outputs            | 4                                              |
+    | Clock              | clk                       (rising_edge)        |
+    | Power Up State     | fifo_wait                                      |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Using one-hot encoding for signal <mmc_state>.
+    Found 8-bit register for signal <current_state>.
+    Found 16-bit register for signal <fifo_din>.
+    Found 1-bit register for signal <fifo_wr_en>.
+    Found 16-bit register for signal <status>.
+    Found 1-bit register for signal <mmc_mosi>.
+    Found 1-bit register for signal <mmc_cs>.
+    Found 1-bit register for signal <fifo_push>.
+    Found 2-bit register for signal <fifo_push_catcher>.
+    Found 49-bit register for signal <mmc_cmd17>.
+    Found 49-bit comparator equal for signal <mmc_mosi$cmp_eq0000> created at line 204.
+    Found 49-bit comparator equal for signal <mmc_mosi$cmp_eq0001> created at line 209.
+    Found 8-bit register for signal <mmc_new_state>.
+    Found 9-bit comparator less for signal <mmc_new_state$cmp_lt0000> created at line 251.
+    Found 17-bit register for signal <mmc_receive_crc>.
+    Found 8-bit register for signal <mmc_receive_rt>.
+    Found 17-bit register for signal <mmc_receive_segment>.
+    Found 16-bit register for signal <mmc_receive_segment_push_to_fifo>.
+    Found 9-bit comparator greatequal for signal <mmc_receive_segment_push_to_fifo$cmp_ge0000> created at line 251.
+    Found 9-bit register for signal <mmc_segments_read>.
+    Found 9-bit adder for signal <mmc_segments_read$addsub0000> created at line 255.
+    Found 8-bit register for signal <mmc_state>.
+    Found 1-bit register for signal <rc_is_dividable>.
+    Found 32-bit register for signal <read_address>.
+    Found 32-bit adder for signal <read_address$addsub0000> created at line 209.
+    Found 1-bit register for signal <reset_request>.
+    Found 1-bit register for signal <reset_reset>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred 213 D-type flip-flop(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred   4 Comparator(s).
+Unit <MMCReader> synthesized.
+
+
+Synthesizing Unit <KeyboardController>.
+    Related source file is "//fs2/kai.fabian$/Profile/Documents/GitHub/S76D/src/KeyboardController.vhd".
+    Found 8-bit register for signal <scancode>.
+    Found 1-bit register for signal <break>.
+    Found 1-bit register for signal <ready>.
+    Found 1-bit register for signal <extend>.
+    Found 1-bit register for signal <do_reset_int>.
+    Found 1-bit register for signal <e0cache>.
+    Found 1-bit register for signal <e0outcache>.
+    Found 1-bit register for signal <f0cache>.
+    Found 1-bit register for signal <f0outcache>.
+    Found 8-bit register for signal <sccache>.
+    Found 8-bit register for signal <scoutcache>.
+    Summary:
+	inferred  32 D-type flip-flop(s).
+Unit <KeyboardController> synthesized.
+
+
+Synthesizing Unit <ltc1257>.
+    Related source file is "//fs2/kai.fabian$/Profile/Documents/GitHub/S76D/src/ltc1257.vhd".
+WARNING:Xst:647 - Input <load> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found finite state machine <FSM_1> for signal <send_zustand>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 5                                              |
+    | Inputs             | 1                                              |
+    | Outputs            | 6                                              |
+    | Clock              | chipclk                   (rising_edge)        |
+    | Clock enable       | send_zustand$and0000      (positive)           |
+    | Reset              | readyout                  (positive)           |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 00                                             |
+    | Power Up State     | 00                                             |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 1-bit register for signal <ic_data>.
+    Found 1-bit register for signal <ic_clk>.
+    Found 1-bit register for signal <ic_load>.
+    Found 1-bit register for signal <readyout>.
+    Found 13-bit register for signal <send_word>.
+    Found 1-bit xor2 for signal <send_zustand$xor0000> created at line 57.
+    Found 1-bit register for signal <work_clk_detection>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred  18 D-type flip-flop(s).
+Unit <ltc1257> synthesized.
+
+
+Synthesizing Unit <MMCController>.
+    Related source file is "//fs2/kai.fabian$/Profile/Documents/GitHub/S76D/src/MMCController.vhd".
+WARNING:Xst:1305 - Output <message> is never assigned. Tied to value 0000000000000000.
+WARNING:Xst:1780 - Signal <wave_word> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <reader_status> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <pcm_word> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <mmc_clk_divider<31:26>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <initializer_status> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 8-bit register for signal <status>.
+    Found 1-bit register for signal <mmc_mosi>.
+    Found 1-bit register for signal <mmc_cs>.
+    Found 1-bit register for signal <int_mmc_clk>.
+    Found 1-bit register for signal <next_state<0>>.
+    Found 1-bit register for signal <reader_enabled>.
+    Found 1-bit register for signal <state<0>>.
+    Summary:
+	inferred  14 D-type flip-flop(s).
+Unit <MMCController> synthesized.
+
+
+Synthesizing Unit <SegmentDisplay>.
+    Related source file is "//fs2/kai.fabian$/Profile/Documents/GitHub/S76D/src/SegmentDisplay.vhd".
+    Using one-hot encoding for signal <position>.
+    Found 4-bit register for signal <position>.
+    Found 4-bit register for signal <seg0>.
+    Found 4-bit register for signal <seg1>.
+    Found 4-bit register for signal <seg2>.
+    Found 4-bit register for signal <seg3>.
+    Summary:
+	inferred  20 D-type flip-flop(s).
+Unit <SegmentDisplay> synthesized.
+
+
+Synthesizing Unit <RectWaveSynth>.
+    Related source file is "//fs2/kai.fabian$/Profile/Documents/GitHub/S76D/src/RectWaveSynth.vhd".
+    Found 32x18-bit ROM for signal <$rom0000>.
+    Found 1-bit register for signal <audioOut>.
+    Found 22-bit register for signal <clkDiv>.
+    Found 1-bit register for signal <disable>.
+    Found 17-bit register for signal <newClkDiv>.
+    Summary:
+	inferred   1 ROM(s).
+	inferred  41 D-type flip-flop(s).
+Unit <RectWaveSynth> synthesized.
+
+
+Synthesizing Unit <MusicPlayer>.
+    Related source file is "//fs2/kai.fabian$/Profile/Documents/GitHub/S76D/src/MusicPlayer.vhd".
+WARNING:Xst:1780 - Signal <read_fifo_catcher> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <pcm_word<4:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <kb_debug<1:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <fifo_wr_data_count> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <fifo_rd_data_count> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <fifo_empty> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <fifo_dbg_clk> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+    Register <mmc_reset> equivalent to <fifo_rst> has been removed
+    Found 8x7-bit ROM for signal <tmp$mux0000> created at line 227.
+    Found 8-bit register for signal <leds>.
+    Found 12-bit adder for signal <dac_data>.
+    Found 1-bit register for signal <fifo_rst>.
+    Found 1-bit register for signal <is_playing>.
+    Found 2-bit register for signal <kb_ready_flankenfaenger>.
+    Found 8-bit register for signal <moebius_disp>.
+    Found 1-bit register for signal <new_state<0>>.
+    Found 16-bit adder for signal <pcm_word>.
+    Found 16-bit register for signal <seg_num>.
+    Found 8-bit register for signal <song_number>.
+    Found 32-bit register for signal <start_address>.
+    Found 1-bit register for signal <state<0>>.
+    Found 3-bit updown counter for signal <tone_volume>.
+    Found 3-bit comparator greatequal for signal <tone_volume$cmp_ge0000> created at line 276.
+    Found 3-bit comparator lessequal for signal <tone_volume$cmp_le0000> created at line 272.
+    Found 2-bit register for signal <vol_down_ff>.
+    Found 2-bit register for signal <vol_up_ff>.
+    Summary:
+	inferred   1 ROM(s).
+	inferred   1 Counter(s).
+	inferred  82 D-type flip-flop(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred   2 Comparator(s).
+Unit <MusicPlayer> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 2
+ 32x18-bit ROM                                         : 1
+ 8x7-bit ROM                                           : 1
+# Adders/Subtractors                                   : 12
+ 12-bit adder                                          : 1
+ 12-bit subtractor                                     : 1
+ 16-bit adder                                          : 1
+ 26-bit subtractor                                     : 7
+ 32-bit adder                                          : 1
+ 9-bit adder                                           : 1
+# Counters                                             : 8
+ 3-bit updown counter                                  : 1
+ 32-bit down counter                                   : 7
+# Registers                                            : 93
+ 1-bit register                                        : 47
+ 10-bit register                                       : 2
+ 11-bit register                                       : 1
+ 12-bit register                                       : 1
+ 13-bit register                                       : 1
+ 16-bit register                                       : 5
+ 17-bit register                                       : 3
+ 2-bit register                                        : 4
+ 22-bit register                                       : 1
+ 32-bit register                                       : 2
+ 4-bit register                                        : 5
+ 49-bit register                                       : 4
+ 6-bit register                                        : 1
+ 8-bit register                                        : 15
+ 9-bit register                                        : 1
+# Comparators                                          : 19
+ 3-bit comparator greatequal                           : 1
+ 3-bit comparator lessequal                            : 1
+ 32-bit comparator greatequal                          : 7
+ 49-bit comparator equal                               : 8
+ 9-bit comparator greatequal                           : 1
+ 9-bit comparator less                                 : 1
+# Multiplexers                                         : 3
+ 49-bit 4-to-1 multiplexer                             : 3
+# Tristates                                            : 2
+ 1-bit tristate buffer                                 : 2
+# Xors                                                 : 1
+ 1-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_1> for best encoding.
+Optimizing FSM <DAC/send_zustand/FSM> on signal <send_zustand[1:4]> with one-hot encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00    | 0001
+ 01    | 0010
+ 10    | 0100
+ 11    | 1000
+-------------------
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <MMCController/reader/fifo_state/FSM> on signal <fifo_state[1:4]> with one-hot encoding.
+-------------------------------
+ State             | Encoding
+-------------------------------
+ fifo_wait         | 0001
+ fifo_data_prepare | 0010
+ fifo_write        | 0100
+ fifo_stop_writing | 1000
+-------------------------------
+Reading core <ipcore_dir/mmc_fifo.ngc>.
+Loading core <mmc_fifo> for timing and area information for instance <FIFO>.
+INFO:Xst:2261 - The FF/Latch <clkDiv_17> in Unit <Synthesizer> is equivalent to the following 4 FFs/Latches, which will be removed : <clkDiv_18> <clkDiv_19> <clkDiv_20> <clkDiv_21> 
+WARNING:Xst:1426 - The value init of the FF/Latch next_state_0 hinder the constant cleaning in the block MMCController.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1710 - FF/Latch <mmc_cs> (without init value) has a constant value of 0 in block <reader>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <tonecode_5> (without init value) has a constant value of 0 in block <ScancodeConverter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <clkDiv_17> has a constant value of 0 in block <Synthesizer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <start_address_13> has a constant value of 0 in block <MusicPlayer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <start_address_14> has a constant value of 0 in block <MusicPlayer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <start_address_15> has a constant value of 0 in block <MusicPlayer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <start_address_16> has a constant value of 0 in block <MusicPlayer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <start_address_17> has a constant value of 0 in block <MusicPlayer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <start_address_18> has a constant value of 0 in block <MusicPlayer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <start_address_19> has a constant value of 0 in block <MusicPlayer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <start_address_20> has a constant value of 0 in block <MusicPlayer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <start_address_21> has a constant value of 0 in block <MusicPlayer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <start_address_22> has a constant value of 0 in block <MusicPlayer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <start_address_23> has a constant value of 0 in block <MusicPlayer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <start_address_24> has a constant value of 0 in block <MusicPlayer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <start_address_25> has a constant value of 0 in block <MusicPlayer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <start_address_29> has a constant value of 0 in block <MusicPlayer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <start_address_30> has a constant value of 0 in block <MusicPlayer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <start_address_31> has a constant value of 0 in block <MusicPlayer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <song_number_4> has a constant value of 0 in block <MusicPlayer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <song_number_5> has a constant value of 0 in block <MusicPlayer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <song_number_6> has a constant value of 0 in block <MusicPlayer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <song_number_7> has a constant value of 0 in block <MusicPlayer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <start_address_0> has a constant value of 0 in block <MusicPlayer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <start_address_1> has a constant value of 0 in block <MusicPlayer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <start_address_2> has a constant value of 0 in block <MusicPlayer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <start_address_3> has a constant value of 0 in block <MusicPlayer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <start_address_4> has a constant value of 0 in block <MusicPlayer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <start_address_5> has a constant value of 0 in block <MusicPlayer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <start_address_6> has a constant value of 0 in block <MusicPlayer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <start_address_7> has a constant value of 0 in block <MusicPlayer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <start_address_8> has a constant value of 0 in block <MusicPlayer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <start_address_9> has a constant value of 0 in block <MusicPlayer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <start_address_10> has a constant value of 0 in block <MusicPlayer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <start_address_11> has a constant value of 0 in block <MusicPlayer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <start_address_12> has a constant value of 0 in block <MusicPlayer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2404 -  FFs/Latches <tonecode<5:5>> (without init value) have a constant value of 0 in block <ScancodeTonecodeConverter>.
+WARNING:Xst:2404 -  FFs/Latches <status<15:8>> (without init value) have a constant value of 0 in block <MMCReader>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 2
+# ROMs                                                 : 2
+ 32x18-bit ROM                                         : 1
+ 8x7-bit ROM                                           : 1
+# Adders/Subtractors                                   : 12
+ 12-bit adder                                          : 1
+ 12-bit subtractor                                     : 1
+ 16-bit adder                                          : 1
+ 26-bit subtractor                                     : 7
+ 32-bit adder                                          : 1
+ 9-bit adder                                           : 1
+# Counters                                             : 8
+ 3-bit updown counter                                  : 1
+ 32-bit down counter                                   : 7
+# Registers                                            : 670
+ Flip-Flops                                            : 670
+# Comparators                                          : 19
+ 3-bit comparator greatequal                           : 1
+ 3-bit comparator lessequal                            : 1
+ 32-bit comparator greatequal                          : 7
+ 49-bit comparator equal                               : 8
+ 9-bit comparator greatequal                           : 1
+ 9-bit comparator less                                 : 1
+# Multiplexers                                         : 3
+ 49-bit 4-to-1 multiplexer                             : 3
+# Xors                                                 : 1
+ 1-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <status_1> (without init value) has a constant value of 0 in block <MMCInitializer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <status_2> (without init value) has a constant value of 0 in block <MMCInitializer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <mmc_cs> (without init value) has a constant value of 0 in block <MMCReader>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1426 - The value init of the FF/Latch next_state_0 hinder the constant cleaning in the block MMCController.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1293 - FF/Latch <clkDiv_17> has a constant value of 0 in block <RectWaveSynth>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clkDiv_18> has a constant value of 0 in block <RectWaveSynth>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clkDiv_19> has a constant value of 0 in block <RectWaveSynth>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clkDiv_20> has a constant value of 0 in block <RectWaveSynth>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clkDiv_21> has a constant value of 0 in block <RectWaveSynth>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <start_address_31> has a constant value of 0 in block <MusicPlayer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <start_address_30> has a constant value of 0 in block <MusicPlayer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <start_address_29> has a constant value of 0 in block <MusicPlayer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <start_address_25> has a constant value of 0 in block <MusicPlayer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <start_address_24> has a constant value of 0 in block <MusicPlayer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <start_address_23> has a constant value of 0 in block <MusicPlayer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <start_address_22> has a constant value of 0 in block <MusicPlayer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <start_address_21> has a constant value of 0 in block <MusicPlayer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <start_address_20> has a constant value of 0 in block <MusicPlayer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <start_address_19> has a constant value of 0 in block <MusicPlayer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <start_address_18> has a constant value of 0 in block <MusicPlayer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <start_address_17> has a constant value of 0 in block <MusicPlayer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <start_address_16> has a constant value of 0 in block <MusicPlayer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <start_address_15> has a constant value of 0 in block <MusicPlayer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <start_address_14> has a constant value of 0 in block <MusicPlayer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <start_address_13> has a constant value of 0 in block <MusicPlayer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <song_number_4> has a constant value of 0 in block <MusicPlayer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <song_number_5> has a constant value of 0 in block <MusicPlayer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <song_number_6> has a constant value of 0 in block <MusicPlayer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <song_number_7> has a constant value of 0 in block <MusicPlayer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <start_address_0> has a constant value of 0 in block <MusicPlayer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <start_address_1> has a constant value of 0 in block <MusicPlayer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <start_address_2> has a constant value of 0 in block <MusicPlayer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <start_address_3> has a constant value of 0 in block <MusicPlayer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <start_address_4> has a constant value of 0 in block <MusicPlayer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <start_address_5> has a constant value of 0 in block <MusicPlayer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <start_address_6> has a constant value of 0 in block <MusicPlayer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <start_address_7> has a constant value of 0 in block <MusicPlayer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <start_address_8> has a constant value of 0 in block <MusicPlayer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <start_address_9> has a constant value of 0 in block <MusicPlayer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <start_address_10> has a constant value of 0 in block <MusicPlayer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <start_address_11> has a constant value of 0 in block <MusicPlayer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <start_address_12> has a constant value of 0 in block <MusicPlayer>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <status_0> in Unit <MMCInitializer> is equivalent to the following 4 FFs/Latches, which will be removed : <status_3> <status_4> <status_5> <status_6> 
+INFO:Xst:1901 - Instance U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[0].ram.r/s3_noinit.ram/dpram.dp2x2.ram in unit U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[0].ram.r/s3_noinit.ram/dpram.dp2x2.ram of type RAMB16_S2_S2 has been replaced by RAMB16
+INFO:Xst:1901 - Instance U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[1].ram.r/s3_noinit.ram/dpram.dp2x2.ram in unit U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[1].ram.r/s3_noinit.ram/dpram.dp2x2.ram of type RAMB16_S2_S2 has been replaced by RAMB16
+INFO:Xst:1901 - Instance U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[2].ram.r/s3_noinit.ram/dpram.dp2x2.ram in unit U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[2].ram.r/s3_noinit.ram/dpram.dp2x2.ram of type RAMB16_S2_S2 has been replaced by RAMB16
+INFO:Xst:1901 - Instance U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[3].ram.r/s3_noinit.ram/dpram.dp2x2.ram in unit U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[3].ram.r/s3_noinit.ram/dpram.dp2x2.ram of type RAMB16_S2_S2 has been replaced by RAMB16
+INFO:Xst:1901 - Instance U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[4].ram.r/s3_noinit.ram/dpram.dp2x2.ram in unit U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[4].ram.r/s3_noinit.ram/dpram.dp2x2.ram of type RAMB16_S2_S2 has been replaced by RAMB16
+INFO:Xst:1901 - Instance U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[5].ram.r/s3_noinit.ram/dpram.dp2x2.ram in unit U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[5].ram.r/s3_noinit.ram/dpram.dp2x2.ram of type RAMB16_S2_S2 has been replaced by RAMB16
+INFO:Xst:1901 - Instance U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[6].ram.r/s3_noinit.ram/dpram.dp2x2.ram in unit U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[6].ram.r/s3_noinit.ram/dpram.dp2x2.ram of type RAMB16_S2_S2 has been replaced by RAMB16
+INFO:Xst:1901 - Instance U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[7].ram.r/s3_noinit.ram/dpram.dp2x2.ram in unit U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[7].ram.r/s3_noinit.ram/dpram.dp2x2.ram of type RAMB16_S2_S2 has been replaced by RAMB16
+WARNING:Xst:2042 - Unit MMCInitializer: 2 internal tristates are replaced by logic (pull-up yes): mmc_cs, mmc_mosi.
+
+Optimizing unit <MusicPlayer> ...
+
+Optimizing unit <ScancodeTonecodeConverter> ...
+
+Optimizing unit <KeyboardInput> ...
+
+Optimizing unit <MMCInitializer> ...
+
+Optimizing unit <MMCReader> ...
+
+Optimizing unit <KeyboardController> ...
+
+Optimizing unit <ltc1257> ...
+
+Optimizing unit <MMCController> ...
+
+Optimizing unit <SegmentDisplay> ...
+
+Optimizing unit <RectWaveSynth> ...
+WARNING:Xst:1293 - FF/Latch <MMCController/reader/read_address_0> has a constant value of 0 in block <MusicPlayer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MMCController/reader/read_address_1> has a constant value of 0 in block <MusicPlayer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MMCController/reader/read_address_2> has a constant value of 0 in block <MusicPlayer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MMCController/reader/read_address_3> has a constant value of 0 in block <MusicPlayer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MMCController/reader/read_address_4> has a constant value of 0 in block <MusicPlayer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MMCController/reader/read_address_5> has a constant value of 0 in block <MusicPlayer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MMCController/reader/read_address_6> has a constant value of 0 in block <MusicPlayer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MMCController/reader/read_address_7> has a constant value of 0 in block <MusicPlayer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <MMCController/reader/read_address_8> has a constant value of 0 in block <MusicPlayer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <MMCController/reader/status_0> of sequential type is unconnected in block <MusicPlayer>.
+WARNING:Xst:2677 - Node <MMCController/reader/status_1> of sequential type is unconnected in block <MusicPlayer>.
+WARNING:Xst:2677 - Node <MMCController/reader/status_2> of sequential type is unconnected in block <MusicPlayer>.
+WARNING:Xst:2677 - Node <MMCController/reader/status_3> of sequential type is unconnected in block <MusicPlayer>.
+WARNING:Xst:2677 - Node <MMCController/reader/status_4> of sequential type is unconnected in block <MusicPlayer>.
+WARNING:Xst:2677 - Node <MMCController/reader/status_5> of sequential type is unconnected in block <MusicPlayer>.
+WARNING:Xst:2677 - Node <MMCController/reader/status_6> of sequential type is unconnected in block <MusicPlayer>.
+WARNING:Xst:2677 - Node <MMCController/reader/status_7> of sequential type is unconnected in block <MusicPlayer>.
+WARNING:Xst:2677 - Node <MMCController/initializer/debug> of sequential type is unconnected in block <MusicPlayer>.
+WARNING:Xst:2677 - Node <MMCController/initializer/status_0> of sequential type is unconnected in block <MusicPlayer>.
+WARNING:Xst:2677 - Node <MMCController/initializer/status_7> of sequential type is unconnected in block <MusicPlayer>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block MusicPlayer, actual ratio is 54.
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/user_valid> in Unit <FIFO> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/curr_fwft_state_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/wr_rst_reg_1> in Unit <FIFO> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/wr_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_fb> in Unit <FIFO> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg_2> in Unit <FIFO> is equivalent to the following 2 FFs/Latches : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg_1> <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i> in Unit <FIFO> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_fb> in Unit <FIFO> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/user_valid> in Unit <FIFO> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/curr_fwft_state_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/wr_rst_reg_1> in Unit <FIFO> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/wr_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i> in Unit <FIFO> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg_2> in Unit <FIFO> is equivalent to the following 2 FFs/Latches : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg_1> <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg_0> 
+FlipFlop MMCController/reader/mmc_state_1 has been replicated 1 time(s)
+FlipFlop MMCController/reader/mmc_state_2 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 842
+ Flip-Flops                                            : 842
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : MusicPlayer.ngr
+Top Level Output File Name         : MusicPlayer
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 41
+
+Cell Usage :
+# BELS                             : 2747
+#      GND                         : 10
+#      INV                         : 284
+#      LUT1                        : 93
+#      LUT2                        : 215
+#      LUT2_D                      : 4
+#      LUT2_L                      : 2
+#      LUT3                        : 342
+#      LUT3_D                      : 4
+#      LUT3_L                      : 3
+#      LUT4                        : 690
+#      LUT4_D                      : 12
+#      LUT4_L                      : 34
+#      MUXCY                       : 593
+#      MUXF5                       : 82
+#      VCC                         : 2
+#      XORCY                       : 377
+# FlipFlops/Latches                : 1091
+#      FD                          : 98
+#      FD_1                        : 91
+#      FDC                         : 143
+#      FDCE                        : 64
+#      FDCE_1                      : 1
+#      FDCP                        : 16
+#      FDE                         : 46
+#      FDE_1                       : 191
+#      FDP                         : 24
+#      FDPE                        : 6
+#      FDR                         : 176
+#      FDR_1                       : 1
+#      FDRE                        : 20
+#      FDRS                        : 4
+#      FDS                         : 78
+#      FDS_1                       : 116
+#      FDSE                        : 1
+#      FDSE_1                      : 15
+# RAMS                             : 8
+#      RAMB16                      : 8
+# Clock Buffers                    : 6
+#      BUFG                        : 5
+#      BUFGP                       : 1
+# IO Buffers                       : 40
+#      IBUF                        : 14
+#      OBUF                        : 26
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s200ft256-4 
+
+ Number of Slices:                      983  out of   1920    51%  
+ Number of Slice Flip Flops:           1091  out of   3840    28%  
+ Number of 4 input LUTs:               1683  out of   3840    43%  
+ Number of IOs:                          41
+ Number of bonded IOBs:                  41  out of    173    23%  
+ Number of BRAMs:                         8  out of     12    66%  
+ Number of GCLKs:                         6  out of      8    75%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+----------------------------------------------------+--------------------------------+-------+
+Clock Signal                                        | Clock buffer(FF name)          | Load  |
+----------------------------------------------------+--------------------------------+-------+
+AudioClockDivider/outclk1                           | BUFG                           | 128   |
+clk                                                 | BUFGP                          | 541   |
+MoebiusClockDivider/outclk                          | NONE(vol_up_ff_0)              | 15    |
+Keyboard/clkdiv/outclk1                             | BUFG                           | 24    |
+Keyboard/int_ready1(Keyboard/eingabe/X_1_mux00011:O)| BUFG(*)(Keyboard/e0outcache)   | 21    |
+MMCController/int_mmc_clk1                          | BUFG                           | 356   |
+SegmentDriver/taktteiler/outclk1                    | BUFG                           | 20    |
+Synthesizer/audioteiler/outclk                      | NONE(Synthesizer/audioOut)     | 1     |
+MMCController/MMCClockDivider/outclk                | NONE(MMCController/int_mmc_clk)| 1     |
+----------------------------------------------------+--------------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------+-------+
+Control Signal                                                                                                                           | Buffer(FF name)                                                                                             | Load  |
+-----------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------+-------+
+FIFO/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/wr_rst_reg<1>(FIFO/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/wr_rst_reg_1:Q)| NONE(FIFO/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.gpf.wrpf/diff_pntr_pad_10)| 65    |
+FIFO/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg<1>(FIFO/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg_1:Q)| NONE(FIFO/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_0)                | 52    |
+FIFO/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/wr_rst_reg<0>(FIFO/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/wr_rst_reg_0:Q)| NONE(FIFO/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_bin_0)               | 52    |
+FIFO/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg<2>(FIFO/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg_2:Q)| NONE(FIFO/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0)       | 46    |
+FIFO/N0(FIFO/XST_GND:G)                                                                                                                  | NONE(FIFO/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0)       | 14    |
+Keyboard/f0cache_not0001(Keyboard/f0cache_not00011:O)                                                                                    | NONE(Keyboard/do_reset_int)                                                                                 | 11    |
+reset                                                                                                                                    | IBUF                                                                                                        | 11    |
+fifo_rst(fifo_rst:Q)                                                                                                                     | NONE(FIFO/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/RST_FULL_GEN)                                    | 6     |
+FIFO/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_comb(FIFO/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_comb1:O)  | NONE(FIFO/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg_0)                                    | 3     |
+FIFO/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rst_d2(FIFO/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rst_d2:Q)             | NONE(FIFO/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.gpf.wrpf/prog_full_i)     | 3     |
+FIFO/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/wr_rst_comb(FIFO/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/wr_rst_comb1:O)  | NONE(FIFO/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/wr_rst_reg_0)                                    | 2     |
+Keyboard/eingabe/qclk_1_and0000(Keyboard/eingabe/qclk_1_and00001:O)                                                                      | NONE(Keyboard/eingabe/qclk_0)                                                                               | 2     |
+Keyboard/eingabe/qclk_1_and0001(Keyboard/eingabe/qclk_1_and00011:O)                                                                      | NONE(Keyboard/eingabe/qclk_0)                                                                               | 2     |
+Synthesizer/disable(Synthesizer/disable:Q)                                                                                               | NONE(Synthesizer/audioOut)                                                                                  | 1     |
+-----------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 11.346ns (Maximum Frequency: 88.137MHz)
+   Minimum input arrival time before clock: 8.603ns
+   Maximum output required time after clock: 16.188ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'AudioClockDivider/outclk1'
+  Clock period: 9.499ns (frequency: 105.274MHz)
+  Total number of paths / destination ports: 2132 / 266
+-------------------------------------------------------------------------
+Delay:               9.499ns (Levels of Logic = 17)
+  Source:            FIFO/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/count_d1_0 (FF)
+  Destination:       FIFO/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_12 (FF)
+  Source Clock:      AudioClockDivider/outclk1 falling
+  Destination Clock: AudioClockDivider/outclk1 falling
+
+  Data Path: FIFO/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/count_d1_0 to FIFO/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_12
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            11   0.720   1.339  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/count_d1_0 (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/count_d1<0>)
+     LUT2:I1->O            1   0.551   0.000  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/Msub_diff_wr_rd_tmp_lut<0> (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/Msub_diff_wr_rd_tmp_lut<0>)
+     MUXCY:S->O            1   0.500   0.000  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/Msub_diff_wr_rd_tmp_cy<0> (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/Msub_diff_wr_rd_tmp_cy<0>)
+     MUXCY:CI->O           1   0.064   0.000  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/Msub_diff_wr_rd_tmp_cy<1> (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/Msub_diff_wr_rd_tmp_cy<1>)
+     MUXCY:CI->O           1   0.064   0.000  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/Msub_diff_wr_rd_tmp_cy<2> (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/Msub_diff_wr_rd_tmp_cy<2>)
+     MUXCY:CI->O           1   0.064   0.000  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/Msub_diff_wr_rd_tmp_cy<3> (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/Msub_diff_wr_rd_tmp_cy<3>)
+     MUXCY:CI->O           1   0.064   0.000  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/Msub_diff_wr_rd_tmp_cy<4> (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/Msub_diff_wr_rd_tmp_cy<4>)
+     MUXCY:CI->O           1   0.064   0.000  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/Msub_diff_wr_rd_tmp_cy<5> (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/Msub_diff_wr_rd_tmp_cy<5>)
+     MUXCY:CI->O           1   0.064   0.000  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/Msub_diff_wr_rd_tmp_cy<6> (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/Msub_diff_wr_rd_tmp_cy<6>)
+     MUXCY:CI->O           1   0.064   0.000  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/Msub_diff_wr_rd_tmp_cy<7> (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/Msub_diff_wr_rd_tmp_cy<7>)
+     MUXCY:CI->O           1   0.064   0.000  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/Msub_diff_wr_rd_tmp_cy<8> (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/Msub_diff_wr_rd_tmp_cy<8>)
+     MUXCY:CI->O           1   0.064   0.000  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/Msub_diff_wr_rd_tmp_cy<9> (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/Msub_diff_wr_rd_tmp_cy<9>)
+     MUXCY:CI->O           1   0.064   0.000  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/Msub_diff_wr_rd_tmp_cy<10> (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/Msub_diff_wr_rd_tmp_cy<10>)
+     XORCY:CI->O           1   0.904   1.140  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/Msub_diff_wr_rd_tmp_xor<11> (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/diff_wr_rd_tmp<11>)
+     LUT1:I0->O            1   0.551   0.000  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/Madd_rd_dc_i_addsub0000_cy<11>_rt (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/Madd_rd_dc_i_addsub0000_cy<11>_rt)
+     MUXCY:S->O            1   0.500   0.000  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/Madd_rd_dc_i_addsub0000_cy<11> (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/Madd_rd_dc_i_addsub0000_cy<11>)
+     XORCY:CI->O           1   0.904   0.996  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/Madd_rd_dc_i_addsub0000_xor<12> (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_addsub0000<12>)
+     LUT2:I1->O            1   0.551   0.000  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_mux0002<12>1 (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_mux0002<12>)
+     FDCP:D                    0.203          U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_12
+    ----------------------------------------
+    Total                      9.499ns (6.024ns logic, 3.475ns route)
+                                       (63.4% logic, 36.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 10.775ns (frequency: 92.808MHz)
+  Total number of paths / destination ports: 22643 / 925
+-------------------------------------------------------------------------
+Delay:               5.387ns (Levels of Logic = 1)
+  Source:            MMCController/reader/mmc_state_5 (FF)
+  Destination:       MMCController/reader/current_state_7 (FF)
+  Source Clock:      clk falling
+  Destination Clock: clk rising
+
+  Data Path: MMCController/reader/mmc_state_5 to MMCController/reader/current_state_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD_1:C->Q            49   0.720   2.289  MMCController/reader/mmc_state_5 (MMCController/reader/mmc_state_5)
+     LUT4:I0->O            1   0.551   0.801  MMCController/reader/current_state_mux0001<0>1 (MMCController/reader/N8)
+     FDS:S                     1.026          MMCController/reader/current_state_7
+    ----------------------------------------
+    Total                      5.387ns (2.297ns logic, 3.090ns route)
+                                       (42.6% logic, 57.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'MoebiusClockDivider/outclk'
+  Clock period: 6.730ns (frequency: 148.588MHz)
+  Total number of paths / destination ports: 53 / 16
+-------------------------------------------------------------------------
+Delay:               6.730ns (Levels of Logic = 3)
+  Source:            tone_volume_1 (FF)
+  Destination:       tone_volume_0 (FF)
+  Source Clock:      MoebiusClockDivider/outclk rising
+  Destination Clock: MoebiusClockDivider/outclk rising
+
+  Data Path: tone_volume_1 to tone_volume_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             17   0.720   1.684  tone_volume_1 (tone_volume_1)
+     LUT2_L:I0->LO         1   0.551   0.168  leds_mux0005<7>14 (leds_mux0005<7>14)
+     LUT4:I2->O            1   0.551   0.996  tone_volume_not00022 (tone_volume_not0002_bdd0)
+     LUT4:I1->O            3   0.551   0.907  tone_volume_not00021 (tone_volume_not0002)
+     FDE:CE                    0.602          tone_volume_0
+    ----------------------------------------
+    Total                      6.730ns (2.975ns logic, 3.755ns route)
+                                       (44.2% logic, 55.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Keyboard/clkdiv/outclk1'
+  Clock period: 6.726ns (frequency: 148.677MHz)
+  Total number of paths / destination ports: 62 / 13
+-------------------------------------------------------------------------
+Delay:               6.726ns (Levels of Logic = 3)
+  Source:            Keyboard/eingabe/qscan_8 (FF)
+  Destination:       Keyboard/ready (FF)
+  Source Clock:      Keyboard/clkdiv/outclk1 rising
+  Destination Clock: Keyboard/clkdiv/outclk1 rising
+
+  Data Path: Keyboard/eingabe/qscan_8 to Keyboard/ready
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDP:C->Q              4   0.720   1.256  Keyboard/eingabe/qscan_8 (Keyboard/eingabe/qscan_8)
+     LUT4_L:I0->LO         1   0.551   0.295  Keyboard/readyoutcache1_SW0 (N111)
+     LUT4:I1->O            3   0.551   0.975  Keyboard/readyoutcache1 (Keyboard/N0)
+     LUT3:I2->O            1   0.551   0.801  Keyboard/readyoutcache2 (Keyboard/readyoutcache)
+     FDR:R                     1.026          Keyboard/ready
+    ----------------------------------------
+    Total                      6.726ns (3.399ns logic, 3.327ns route)
+                                       (50.5% logic, 49.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Keyboard/int_ready1'
+  Clock period: 11.346ns (frequency: 88.137MHz)
+  Total number of paths / destination ports: 97 / 21
+-------------------------------------------------------------------------
+Delay:               5.673ns (Levels of Logic = 2)
+  Source:            Keyboard/sccache_7 (FF)
+  Destination:       Keyboard/e0outcache (FF)
+  Source Clock:      Keyboard/int_ready1 rising
+  Destination Clock: Keyboard/int_ready1 falling
+
+  Data Path: Keyboard/sccache_7 to Keyboard/e0outcache
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              3   0.720   1.246  Keyboard/sccache_7 (Keyboard/sccache_7)
+     LUT3:I0->O            1   0.551   0.869  Keyboard/do_reset_int_or0000_inv_SW1 (N325)
+     LUT4:I2->O           10   0.551   1.134  Keyboard/scoutcache_and00011 (Keyboard/scoutcache_not0001_inv)
+     FDE_1:CE                  0.602          Keyboard/scoutcache_0
+    ----------------------------------------
+    Total                      5.673ns (2.424ns logic, 3.249ns route)
+                                       (42.7% logic, 57.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'MMCController/int_mmc_clk1'
+  Clock period: 10.717ns (frequency: 93.307MHz)
+  Total number of paths / destination ports: 32792 / 488
+-------------------------------------------------------------------------
+Delay:               10.717ns (Levels of Logic = 16)
+  Source:            MMCController/reader/mmc_cmd17_0 (FF)
+  Destination:       MMCController/reader/read_address_26 (FF)
+  Source Clock:      MMCController/int_mmc_clk1 falling
+  Destination Clock: MMCController/int_mmc_clk1 falling
+
+  Data Path: MMCController/reader/mmc_cmd17_0 to MMCController/reader/read_address_26
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDS_1:C->Q            4   0.720   1.256  MMCController/reader/mmc_cmd17_0 (MMCController/reader/mmc_cmd17_0)
+     LUT4:I0->O            1   0.551   0.000  MMCController/reader/Mcompar_mmc_mosi_cmp_eq0000_lut<0> (MMCController/reader/Mcompar_mmc_mosi_cmp_eq0000_lut<0>)
+     MUXCY:S->O            1   0.500   0.000  MMCController/reader/Mcompar_mmc_mosi_cmp_eq0000_cy<0> (MMCController/reader/Mcompar_mmc_mosi_cmp_eq0000_cy<0>)
+     MUXCY:CI->O           1   0.064   0.000  MMCController/reader/Mcompar_mmc_mosi_cmp_eq0000_cy<1> (MMCController/reader/Mcompar_mmc_mosi_cmp_eq0000_cy<1>)
+     MUXCY:CI->O           1   0.064   0.000  MMCController/reader/Mcompar_mmc_mosi_cmp_eq0000_cy<2> (MMCController/reader/Mcompar_mmc_mosi_cmp_eq0000_cy<2>)
+     MUXCY:CI->O           1   0.064   0.000  MMCController/reader/Mcompar_mmc_mosi_cmp_eq0000_cy<3> (MMCController/reader/Mcompar_mmc_mosi_cmp_eq0000_cy<3>)
+     MUXCY:CI->O           1   0.064   0.000  MMCController/reader/Mcompar_mmc_mosi_cmp_eq0000_cy<4> (MMCController/reader/Mcompar_mmc_mosi_cmp_eq0000_cy<4>)
+     MUXCY:CI->O           1   0.064   0.000  MMCController/reader/Mcompar_mmc_mosi_cmp_eq0000_cy<5> (MMCController/reader/Mcompar_mmc_mosi_cmp_eq0000_cy<5>)
+     MUXCY:CI->O           1   0.064   0.000  MMCController/reader/Mcompar_mmc_mosi_cmp_eq0000_cy<6> (MMCController/reader/Mcompar_mmc_mosi_cmp_eq0000_cy<6>)
+     MUXCY:CI->O           1   0.064   0.000  MMCController/reader/Mcompar_mmc_mosi_cmp_eq0000_cy<7> (MMCController/reader/Mcompar_mmc_mosi_cmp_eq0000_cy<7>)
+     MUXCY:CI->O           1   0.064   0.000  MMCController/reader/Mcompar_mmc_mosi_cmp_eq0000_cy<8> (MMCController/reader/Mcompar_mmc_mosi_cmp_eq0000_cy<8>)
+     MUXCY:CI->O           1   0.064   0.000  MMCController/reader/Mcompar_mmc_mosi_cmp_eq0000_cy<9> (MMCController/reader/Mcompar_mmc_mosi_cmp_eq0000_cy<9>)
+     MUXCY:CI->O           1   0.064   0.000  MMCController/reader/Mcompar_mmc_mosi_cmp_eq0000_cy<10> (MMCController/reader/Mcompar_mmc_mosi_cmp_eq0000_cy<10>)
+     MUXCY:CI->O           1   0.064   0.000  MMCController/reader/Mcompar_mmc_mosi_cmp_eq0000_cy<11> (MMCController/reader/Mcompar_mmc_mosi_cmp_eq0000_cy<11>)
+     MUXCY:CI->O          46   0.303   2.128  MMCController/reader/Mcompar_mmc_mosi_cmp_eq0000_cy<12> (MMCController/reader/Mcompar_mmc_mosi_cmp_eq0000_cy<12>)
+     LUT2_D:I1->O         22   0.551   1.626  MMCController/reader/mmc_new_state_mux0003<6>11 (MMCController/reader/N15)
+     LUT4:I3->O            1   0.551   0.801  MMCController/reader/read_address_mux0000<27>_SW0 (N241)
+     FDS_1:S                   1.026          MMCController/reader/read_address_27
+    ----------------------------------------
+    Total                     10.717ns (4.906ns logic, 5.811ns route)
+                                       (45.8% logic, 54.2% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'SegmentDriver/taktteiler/outclk1'
+  Clock period: 6.339ns (frequency: 157.760MHz)
+  Total number of paths / destination ports: 22 / 20
+-------------------------------------------------------------------------
+Delay:               3.169ns (Levels of Logic = 0)
+  Source:            SegmentDriver/position_0 (FF)
+  Destination:       SegmentDriver/seg2_3 (FF)
+  Source Clock:      SegmentDriver/taktteiler/outclk1 rising
+  Destination Clock: SegmentDriver/taktteiler/outclk1 falling
+
+  Data Path: SegmentDriver/position_0 to SegmentDriver/seg2_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             31   0.720   1.847  SegmentDriver/position_0 (SegmentDriver/position_0)
+     FDE_1:CE                  0.602          SegmentDriver/seg0_0
+    ----------------------------------------
+    Total                      3.169ns (1.322ns logic, 1.847ns route)
+                                       (41.7% logic, 58.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Synthesizer/audioteiler/outclk'
+  Clock period: 3.192ns (frequency: 313.283MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               3.192ns (Levels of Logic = 1)
+  Source:            Synthesizer/audioOut (FF)
+  Destination:       Synthesizer/audioOut (FF)
+  Source Clock:      Synthesizer/audioteiler/outclk rising
+  Destination Clock: Synthesizer/audioteiler/outclk rising
+
+  Data Path: Synthesizer/audioOut to Synthesizer/audioOut
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              4   0.720   0.917  Synthesizer/audioOut (Synthesizer/audioOut)
+     INV:I->O              1   0.551   0.801  Synthesizer/audioOut_not00011_INV_0 (Synthesizer/audioOut_not0001)
+     FDC:D                     0.203          Synthesizer/audioOut
+    ----------------------------------------
+    Total                      3.192ns (1.474ns logic, 1.718ns route)
+                                       (46.2% logic, 53.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'MMCController/MMCClockDivider/outclk'
+  Clock period: 2.663ns (frequency: 375.516MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               2.663ns (Levels of Logic = 0)
+  Source:            MMCController/int_mmc_clk (FF)
+  Destination:       MMCController/int_mmc_clk (FF)
+  Source Clock:      MMCController/MMCClockDivider/outclk rising
+  Destination Clock: MMCController/MMCClockDivider/outclk rising
+
+  Data Path: MMCController/int_mmc_clk to MMCController/int_mmc_clk
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              4   0.720   0.917  MMCController/int_mmc_clk (MMCController/int_mmc_clk1)
+     FDR:R                     1.026          MMCController/int_mmc_clk
+    ----------------------------------------
+    Total                      2.663ns (1.746ns logic, 0.917ns route)
+                                       (65.6% logic, 34.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 366 / 45
+-------------------------------------------------------------------------
+Offset:              8.603ns (Levels of Logic = 5)
+  Source:            switches<6> (PAD)
+  Destination:       leds_1 (FF)
+  Destination Clock: clk rising
+
+  Data Path: switches<6> to leds_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   0.821   1.140  switches_6_IBUF (switches_6_IBUF)
+     LUT4:I0->O            1   0.551   0.000  leds_and00001 (leds_and00001)
+     MUXF5:I0->O           7   0.360   1.092  leds_and0000_f5 (leds_and0000)
+     LUT4:I3->O           21   0.551   1.710  leds_mux0005<1>19 (N01)
+     LUT4:I1->O            1   0.551   0.801  leds_mux0005<2>4 (leds_mux0005<2>4)
+     FDS:S                     1.026          leds_2
+    ----------------------------------------
+    Total                      8.603ns (3.860ns logic, 4.743ns route)
+                                       (44.9% logic, 55.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'MoebiusClockDivider/outclk'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              1.825ns (Levels of Logic = 1)
+  Source:            vol_up (PAD)
+  Destination:       vol_up_ff_0 (FF)
+  Destination Clock: MoebiusClockDivider/outclk rising
+
+  Data Path: vol_up to vol_up_ff_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   0.821   0.801  vol_up_IBUF (vol_up_IBUF)
+     FD:D                      0.203          vol_up_ff_0
+    ----------------------------------------
+    Total                      1.825ns (1.024ns logic, 0.801ns route)
+                                       (56.1% logic, 43.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Keyboard/clkdiv/outclk1'
+  Total number of paths / destination ports: 14 / 13
+-------------------------------------------------------------------------
+Offset:              5.085ns (Levels of Logic = 3)
+  Source:            reset (PAD)
+  Destination:       Keyboard/eingabe/qscan_1 (FF)
+  Destination Clock: Keyboard/clkdiv/outclk1 rising
+
+  Data Path: reset to Keyboard/eingabe/qscan_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            19   0.821   1.789  reset_IBUF (reset_IBUF)
+     LUT2:I0->O           11   0.551   1.170  Keyboard/eingabe/X_1_mux00011 (Keyboard/int_ready1)
+     LUT4:I3->O            1   0.551   0.000  Keyboard/eingabe/qscan_mux0000<9>1 (Keyboard/eingabe/qscan_mux0000<9>)
+     FDP:D                     0.203          Keyboard/eingabe/qscan_9
+    ----------------------------------------
+    Total                      5.085ns (2.126ns logic, 2.959ns route)
+                                       (41.8% logic, 58.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Keyboard/int_ready1'
+  Total number of paths / destination ports: 10 / 10
+-------------------------------------------------------------------------
+Offset:              4.897ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       Keyboard/e0outcache (FF)
+  Destination Clock: Keyboard/int_ready1 falling
+
+  Data Path: reset to Keyboard/e0outcache
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            19   0.821   1.789  reset_IBUF (reset_IBUF)
+     LUT4:I0->O           10   0.551   1.134  Keyboard/scoutcache_and00011 (Keyboard/scoutcache_not0001_inv)
+     FDE_1:CE                  0.602          Keyboard/scoutcache_0
+    ----------------------------------------
+    Total                      4.897ns (1.974ns logic, 2.923ns route)
+                                       (40.3% logic, 59.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'MMCController/int_mmc_clk1'
+  Total number of paths / destination ports: 34 / 32
+-------------------------------------------------------------------------
+Offset:              6.371ns (Levels of Logic = 3)
+  Source:            mmc_miso (PAD)
+  Destination:       MMCController/reader/mmc_receive_segment_2 (FF)
+  Destination Clock: MMCController/int_mmc_clk1 falling
+
+  Data Path: mmc_miso to MMCController/reader/mmc_receive_segment_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            13   0.821   1.365  mmc_miso_IBUF (mmc_miso_IBUF)
+     LUT3:I1->O           15   0.551   1.256  MMCController/reader/mmc_receive_segment_mux0001<0>21 (MMCController/reader/N111)
+     LUT3:I2->O            1   0.551   0.801  MMCController/reader/mmc_receive_segment_mux0001<9>_SW0 (N45)
+     FDS_1:S                   1.026          MMCController/reader/mmc_receive_segment_7
+    ----------------------------------------
+    Total                      6.371ns (2.949ns logic, 3.422ns route)
+                                       (46.3% logic, 53.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 13 / 13
+-------------------------------------------------------------------------
+Offset:              7.241ns (Levels of Logic = 1)
+  Source:            DAC/ic_data (FF)
+  Destination:       dacdata (PAD)
+  Source Clock:      clk rising
+
+  Data Path: DAC/ic_data to dacdata
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              2   0.720   0.877  DAC/ic_data (DAC/ic_data)
+     OBUF:I->O                 5.644          dacdata_OBUF (dacdata)
+    ----------------------------------------
+    Total                      7.241ns (6.364ns logic, 0.877ns route)
+                                       (87.9% logic, 12.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'MMCController/MMCClockDivider/outclk'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              7.281ns (Levels of Logic = 1)
+  Source:            MMCController/int_mmc_clk (FF)
+  Destination:       mmc_clock (PAD)
+  Source Clock:      MMCController/MMCClockDivider/outclk rising
+
+  Data Path: MMCController/int_mmc_clk to mmc_clock
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              4   0.720   0.917  MMCController/int_mmc_clk (MMCController/int_mmc_clk1)
+     OBUF:I->O                 5.644          mmc_clock_OBUF (mmc_clock)
+    ----------------------------------------
+    Total                      7.281ns (6.364ns logic, 0.917ns route)
+                                       (87.4% logic, 12.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'SegmentDriver/taktteiler/outclk1'
+  Total number of paths / destination ports: 214 / 12
+-------------------------------------------------------------------------
+Offset:              16.188ns (Levels of Logic = 6)
+  Source:            SegmentDriver/position_0 (FF)
+  Destination:       segment_data<4> (PAD)
+  Source Clock:      SegmentDriver/taktteiler/outclk1 rising
+
+  Data Path: SegmentDriver/position_0 to segment_data<4>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             31   0.720   2.186  SegmentDriver/position_0 (SegmentDriver/position_0)
+     LUT3:I0->O            3   0.551   1.246  SegmentDriver/segbus<5>117 (SegmentDriver/N6)
+     LUT3:I0->O            1   0.551   0.869  SegmentDriver/segbus<4>24 (SegmentDriver/segbus<4>24)
+     LUT4:I2->O            1   0.551   0.827  SegmentDriver/segbus<4>161_SW0 (N472)
+     LUT4:I3->O            1   0.551   1.140  SegmentDriver/segbus<4>161 (SegmentDriver/segbus<4>161)
+     LUT2:I0->O            1   0.551   0.801  SegmentDriver/segbus<4>317 (segment_data_4_OBUF)
+     OBUF:I->O                 5.644          segment_data_4_OBUF (segment_data<4>)
+    ----------------------------------------
+    Total                     16.188ns (9.119ns logic, 7.069ns route)
+                                       (56.3% logic, 43.7% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 36.00 secs
+Total CPU time to Xst completion: 35.99 secs
+ 
+--> 
+
+Total memory usage is 247412 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  131 (   0 filtered)
+Number of infos    :   33 (   0 filtered)
+
