@@ -85,12 +85,13 @@
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
     <transform xil_pn:end_ts="1341486381" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1341486381">
       <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
     </transform>
     <transform xil_pn:end_ts="1341486381" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="2817254399920749129" xil_pn:start_ts="1341486381">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1341486951" xil_pn:in_ck="2246640828295390823" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="-8853498558295083039" xil_pn:start_ts="1341486381">
+    <transform xil_pn:end_ts="1341495082" xil_pn:in_ck="2246640828295390823" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="-8853498558295083039" xil_pn:start_ts="1341495081">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="ipcore_dir/mmc_fifo.ngc"/>
@@ -112,7 +113,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1341487029" xil_pn:in_ck="-5180781494350327090" xil_pn:name="TRANEXT_xstsynthesize_spartan3" xil_pn:prop_ck="6330341391895376319" xil_pn:start_ts="1341486989">
+    <transform xil_pn:end_ts="1341496026" xil_pn:in_ck="-5484022093683568153" xil_pn:name="TRANEXT_xstsynthesize_spartan3" xil_pn:prop_ck="6330341391895376319" xil_pn:start_ts="1341495995">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -135,7 +136,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1341487051" xil_pn:in_ck="-6016759237728516925" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="4757527117221896489" xil_pn:start_ts="1341487038">
+    <transform xil_pn:end_ts="1341496032" xil_pn:in_ck="-6016759237728516925" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="4757527117221896489" xil_pn:start_ts="1341496026">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="MusicPlayer.bld"/>
@@ -144,11 +145,9 @@
       <outfile xil_pn:name="_ngo"/>
       <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1341487077" xil_pn:in_ck="3274851470102499855" xil_pn:name="TRANEXT_map_spartan3" xil_pn:prop_ck="-684010993939208968" xil_pn:start_ts="1341487051">
+    <transform xil_pn:end_ts="1341496041" xil_pn:in_ck="3274851470102499855" xil_pn:name="TRANEXT_map_spartan3" xil_pn:prop_ck="-684010993939208968" xil_pn:start_ts="1341496032">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="MusicPlayer.pcf"/>
       <outfile xil_pn:name="MusicPlayer_map.map"/>
       <outfile xil_pn:name="MusicPlayer_map.mrp"/>
@@ -159,7 +158,7 @@
       <outfile xil_pn:name="MusicPlayer_usage.xml"/>
       <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1341487142" xil_pn:in_ck="4886524312924100104" xil_pn:name="TRANEXT_par_spartan3" xil_pn:prop_ck="3333849164707216606" xil_pn:start_ts="1341487077">
+    <transform xil_pn:end_ts="1341496087" xil_pn:in_ck="4886524312924100104" xil_pn:name="TRANEXT_par_spartan3" xil_pn:prop_ck="3333849164707216606" xil_pn:start_ts="1341496041">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="MusicPlayer.ncd"/>
@@ -173,7 +172,7 @@
       <outfile xil_pn:name="MusicPlayer_par.xrpt"/>
       <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1341488285" xil_pn:in_ck="8935936086878418481" xil_pn:name="TRANEXT_bitFile_spartan3" xil_pn:prop_ck="2154898713194275551" xil_pn:start_ts="1341488254">
+    <transform xil_pn:end_ts="1341496110" xil_pn:in_ck="8935936086878418481" xil_pn:name="TRANEXT_bitFile_spartan3" xil_pn:prop_ck="376274558534249972" xil_pn:start_ts="1341496087">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="MusicPlayer.ut"/>
@@ -186,7 +185,7 @@
       <outfile xil_pn:name="webtalk.log"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
     </transform>
-    <transform xil_pn:end_ts="1341487142" xil_pn:in_ck="129423777245727243" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416186" xil_pn:start_ts="1341487136">
+    <transform xil_pn:end_ts="1341496087" xil_pn:in_ck="129423777245727243" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416186" xil_pn:start_ts="1341496080">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="MusicPlayer.twr"/>

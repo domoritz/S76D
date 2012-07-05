@@ -151,7 +151,7 @@ begin
 		
 		if rising_edge(clk) then
 	
-			--message <= X"FFFF";
+			message <= X"FFFF";
 		
 			case state is
 
@@ -161,7 +161,7 @@ begin
 					
 					status <= initializer_current_state;
 					----state2 <= not initializer_status;
-					--message <= "00000000" & initializer_status;
+					message <= "00000000" & initializer_status;
 				
 					if initializer_ready = '1' then
 						next_state <= STATE_T_READY;						
@@ -174,13 +174,14 @@ begin
 					mmc_cs <= reader_mmc_cs;
 					
 					status <= reader_current_state;
-					--message <= reader_status;
+					message <= reader_status;
 					
 					-- reader_start_address <= "00000000" & "00000000" & X"7E" & X"00";
 					reader_enabled <= '1';
 				
 				when others =>
-					-- ???
+					next_state <= STATE_T_INITIALIZING;
+					reader_enabled <= '0';
 			
 			end case;
 		
