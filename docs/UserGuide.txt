@@ -40,3 +40,48 @@ Play/Pause: use the Esc Key
 Select song number (only while in pause mode): press F1 to F8
 
 Piano: use the lower character keys on the keyboard
+
+
+
+How to get the songs on the MMC card.
+---------------------------------------------
+
+For enabling the board to play music from the SD/MMC card, that music needs to be stored on the card.
+
+To do that, you should ensure that all your audio files are encoded as follows:
+
+- RIFF WAVE files, PCM, 1 channel, 16 bits per sample (signed), 44.100 samples per second.
+
+The board is implemented to support 8 songs that can be played with the keys F1..F8.
+
+The WAVE files can be written to the SD/MMC directly, e.g. using the unix "dd" command.
+
+The songs are aligned on 0x4000000 byte boundaries. That means, that
+a) each song can use up to 64 MB, so that
+b) each song has a max. run time of 760 seconds = ~12.5 minutes
+From these facts results the following table:
+
+|   S  |     A_s    |     A_e    |                |
+^ Song ^ start addr ^  end addr  ^ seek (bs=1024) |
+|    1 | 0x00000000 | 0x03FFFFFF |              0 |
+|    2 | 0x04000000 | 0x07FFFFFF |          65536 |
+|    3 | 0x08000000 | 0x0BFFFFFF |         131072 |
+|    4 | 0x0C000000 | 0x0FFFFFFF |         196608 |
+|    5 | 0x10000000 | 0x13FFFFFF |         262144 |
+|    6 | 0x14000000 | 0x17FFFFFF |         327680 |
+|    7 | 0x18000000 | 0x1BFFFFFF |         393216 |
+|    8 | 0x1C000000 | 0x1FFFFFFF |         458752 |
+
+Resulting from that, the "dd" arguments could be calculated as following:
+(assuming you have a given "bs" = block size)
+
+count_bytes = (A_e - A_s)
+ seek_bytes = A_s
+
+count = count_bytes / bs
+ seek =  seek_bytes / bs
+
+So, to program the file "song5.wav" to the SD/MMC card on song slot #5,
+you could use the following command, assuming that /dev/sdc is your MMC card:
+
+dd if=song5.wav of=/dev/sdc bs=1024 count=65536 seek=262144
