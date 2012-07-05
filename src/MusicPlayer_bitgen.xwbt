@@ -1,8 +1,0 @@
-INTSTYLE=ise
-INFILE=Y:\Profile\Documents\GitHub\S76D\src\MusicPlayer.ncd
-OUTFILE=Y:\Profile\Documents\GitHub\S76D\src\MusicPlayer.bit
-FAMILY=Spartan3
-PART=xc3s200-4ft256
-WORKINGDIR=Y:\Profile\Documents\GitHub\S76D\src
-LICENSE=WebPack
-USER_INFO=210382357_0_0_312
