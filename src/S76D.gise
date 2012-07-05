@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<generated_project xmlns="http://www.xilinx.com/XMLSchema" xmlns:xil_pn="http://www.xilinx.com/XMLSchema">
+
+  <!--                                                          -->
+
+  <!--             For tool use only. Do not edit.              -->
+
+  <!--                                                          -->
+
+  <!-- ProjectNavigator created generated project file.         -->
+
+  <!-- For use in tracking generated file and other information -->
+
+  <!-- allowing preservation of process status.                 -->
+
+  <!--                                                          -->
+
+  <!-- Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved. -->
+
+  <version xmlns="http://www.xilinx.com/XMLSchema">11.1</version>
+
+  <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="S76D.xise"/>
+
+  <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="MusicPlayer.bld"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="MusicPlayer.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="MusicPlayer.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="MusicPlayer.ncd" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="MusicPlayer.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGD" xil_pn:name="MusicPlayer.ngd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="MusicPlayer.ngr"/>
+    <file xil_pn:fileType="FILE_PAD_MISC" xil_pn:name="MusicPlayer.pad"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAR_REPORT" xil_pn:name="MusicPlayer.par" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PCF" xil_pn:name="MusicPlayer.pcf" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="MusicPlayer.prj"/>
+    <file xil_pn:fileType="FILE_TRCE_MISC" xil_pn:name="MusicPlayer.ptwx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="MusicPlayer.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="MusicPlayer.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_TXT_REPORT" xil_pn:name="MusicPlayer.twr" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_XML_REPORT" xil_pn:name="MusicPlayer.twx" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_UNROUTES" xil_pn:name="MusicPlayer.unroutes" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_REPORT" xil_pn:name="MusicPlayer.ut" xil_pn:subbranch="FPGAConfiguration"/>
+    <file xil_pn:fileType="FILE_XPI" xil_pn:name="MusicPlayer.xpi"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="MusicPlayer.xst"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="MusicPlayer_envsettings.html"/>
+    <file xil_pn:fileType="FILE_NCD" xil_pn:name="MusicPlayer_guide.ncd" xil_pn:origination="imported"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="MusicPlayer_map.map" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="MusicPlayer_map.mrp" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="MusicPlayer_map.ncd" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGM" xil_pn:name="MusicPlayer_map.ngm" xil_pn:subbranch="Map"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="MusicPlayer_map.xrpt"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="MusicPlayer_ngdbuild.xrpt"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_EXCEL_REPORT" xil_pn:name="MusicPlayer_pad.csv" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_TXT_REPORT" xil_pn:name="MusicPlayer_pad.txt" xil_pn:subbranch="Par"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="MusicPlayer_par.xrpt"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="MusicPlayer_summary.html"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="MusicPlayer_summary.xml"/>
+    <file xil_pn:fileType="FILE_WEBTALK" xil_pn:name="MusicPlayer_usage.xml"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="MusicPlayer_vhdl.prj"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="MusicPlayer_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="_ngo"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/bitgen.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/map.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/par.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/trce.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="ipcore_dir/coregen.log"/>
+    <file xil_pn:fileType="FILE_USERDOC" xil_pn:name="ipcore_dir/fifo_generator_readme.txt" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_ASY" xil_pn:name="ipcore_dir/mmc_fifo.asy" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="ipcore_dir/mmc_fifo.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_VEO" xil_pn:name="ipcore_dir/mmc_fifo.veo" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_VHO" xil_pn:name="ipcore_dir/mmc_fifo.vho" xil_pn:origination="imported"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_REPORT" xil_pn:name="musicplayer.bgn" xil_pn:subbranch="FPGAConfiguration"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BIT" xil_pn:name="musicplayer.bit" xil_pn:subbranch="FPGAConfiguration"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_DRC" xil_pn:name="musicplayer.drc" xil_pn:subbranch="FPGAConfiguration"/>
+    <file xil_pn:fileType="FILE_MSK" xil_pn:name="musicplayer.msk"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="usage_statistics_webtalk.html"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="webtalk.log"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xlnx_auto_0_xdb"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
+  </files>
+
+  <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1341486381" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1341486381">
+      <status xil_pn:value="SuccessfullyRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1341486381" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="2817254399920749129" xil_pn:start_ts="1341486381">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1341486951" xil_pn:in_ck="2246640828295390823" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="-8853498558295083039" xil_pn:start_ts="1341486381">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="ipcore_dir/mmc_fifo.ngc"/>
+      <outfile xil_pn:name="ipcore_dir/mmc_fifo.vhd"/>
+    </transform>
+    <transform xil_pn:end_ts="1341486951" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1341486951">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1341486951" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="3237632285784805521" xil_pn:start_ts="1341486951">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1341486951" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="1110319057727724918" xil_pn:start_ts="1341486951">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1341486951" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="-5165761241888362581" xil_pn:start_ts="1341486951">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1341487029" xil_pn:in_ck="-5180781494350327090" xil_pn:name="TRANEXT_xstsynthesize_spartan3" xil_pn:prop_ck="6330341391895376319" xil_pn:start_ts="1341486989">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="MusicPlayer.lso"/>
+      <outfile xil_pn:name="MusicPlayer.ngc"/>
+      <outfile xil_pn:name="MusicPlayer.ngr"/>
+      <outfile xil_pn:name="MusicPlayer.prj"/>
+      <outfile xil_pn:name="MusicPlayer.stx"/>
+      <outfile xil_pn:name="MusicPlayer.syr"/>
+      <outfile xil_pn:name="MusicPlayer.xst"/>
+      <outfile xil_pn:name="MusicPlayer_vhdl.prj"/>
+      <outfile xil_pn:name="MusicPlayer_xst.xrpt"/>
+      <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
+      <outfile xil_pn:name="webtalk_pn.xml"/>
+      <outfile xil_pn:name="xst"/>
+    </transform>
+    <transform xil_pn:end_ts="1341486965" xil_pn:in_ck="8935936086878426106" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="1392522901972668326" xil_pn:start_ts="1341486965">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1341487051" xil_pn:in_ck="-6016759237728516925" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="4757527117221896489" xil_pn:start_ts="1341487038">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="MusicPlayer.bld"/>
+      <outfile xil_pn:name="MusicPlayer.ngd"/>
+      <outfile xil_pn:name="MusicPlayer_ngdbuild.xrpt"/>
+      <outfile xil_pn:name="_ngo"/>
+      <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+    </transform>
+    <transform xil_pn:end_ts="1341487077" xil_pn:in_ck="3274851470102499855" xil_pn:name="TRANEXT_map_spartan3" xil_pn:prop_ck="-684010993939208968" xil_pn:start_ts="1341487051">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="MusicPlayer.pcf"/>
+      <outfile xil_pn:name="MusicPlayer_map.map"/>
+      <outfile xil_pn:name="MusicPlayer_map.mrp"/>
+      <outfile xil_pn:name="MusicPlayer_map.ncd"/>
+      <outfile xil_pn:name="MusicPlayer_map.ngm"/>
+      <outfile xil_pn:name="MusicPlayer_map.xrpt"/>
+      <outfile xil_pn:name="MusicPlayer_summary.xml"/>
+      <outfile xil_pn:name="MusicPlayer_usage.xml"/>
+      <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
+    </transform>
+    <transform xil_pn:end_ts="1341487142" xil_pn:in_ck="4886524312924100104" xil_pn:name="TRANEXT_par_spartan3" xil_pn:prop_ck="3333849164707216606" xil_pn:start_ts="1341487077">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="MusicPlayer.ncd"/>
+      <outfile xil_pn:name="MusicPlayer.pad"/>
+      <outfile xil_pn:name="MusicPlayer.par"/>
+      <outfile xil_pn:name="MusicPlayer.ptwx"/>
+      <outfile xil_pn:name="MusicPlayer.unroutes"/>
+      <outfile xil_pn:name="MusicPlayer.xpi"/>
+      <outfile xil_pn:name="MusicPlayer_pad.csv"/>
+      <outfile xil_pn:name="MusicPlayer_pad.txt"/>
+      <outfile xil_pn:name="MusicPlayer_par.xrpt"/>
+      <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
+    </transform>
+    <transform xil_pn:end_ts="1341488285" xil_pn:in_ck="8935936086878418481" xil_pn:name="TRANEXT_bitFile_spartan3" xil_pn:prop_ck="2154898713194275551" xil_pn:start_ts="1341488254">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="MusicPlayer.ut"/>
+      <outfile xil_pn:name="_xmsgs/bitgen.xmsgs"/>
+      <outfile xil_pn:name="musicplayer.bgn"/>
+      <outfile xil_pn:name="musicplayer.bit"/>
+      <outfile xil_pn:name="musicplayer.drc"/>
+      <outfile xil_pn:name="musicplayer.msk"/>
+      <outfile xil_pn:name="usage_statistics_webtalk.html"/>
+      <outfile xil_pn:name="webtalk.log"/>
+      <outfile xil_pn:name="webtalk_pn.xml"/>
+    </transform>
+    <transform xil_pn:end_ts="1341487142" xil_pn:in_ck="129423777245727243" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416186" xil_pn:start_ts="1341487136">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="MusicPlayer.twr"/>
+      <outfile xil_pn:name="MusicPlayer.twx"/>
+      <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>
+    </transform>
+  </transforms>
+
+</generated_project>
