@@ -1,0 +1,46 @@
+digraph G {
+	graph [compound=true];
+
+	start0 [shape=point];
+	start1 [shape=point];
+	mmcs_ready [peripheries=2];
+
+	DUMMY_0 -> DUMMY_1 [ltail=cluster_0, lhead=cluster_1];
+
+	subgraph cluster_0 {
+		label = "initializer";
+
+		DUMMY_0 [shape=point style=invis]
+
+		mmcs_error_initializer [label=mmcs_error];
+		start0 -> mmcs_init_wait -> mmcs_cmd0 -> mmcs_cmd0_response -> mmcs_cmd1 
+			-> mmcs_cmd1_wait -> mmcs_cmd16_prepare -> mmcs_cmd16 -> mmcs_cmd16_response -> mmcs_ready;
+
+		//{rank=same; start0 mmcs_init_wait mmcs_cmd0 mmcs_cmd0_response mmcs_cmd1 mmcs_cmd1_wait 
+		//	mmcs_cmd16_prepare mmcs_cmd16 mmcs_cmd16_response mmcs_ready}
+
+		mmcs_cmd16_response -> mmcs_error_initializer [label="error"];
+		mmcs_init_wait -> mmcs_init_wait;
+		mmcs_cmd0_response -> mmcs_error_initializer [label="error"];
+		mmc_cmd_wait -> mmcs_cmd1;
+		mmcs_error_initializer -> mmcs_error_initializer;
+	}
+
+	subgraph cluster_1 {
+		label = "reader";
+
+		DUMMY_1 [shape=point style=invis]
+
+		mmcs_error_reader [label=mmcs_error];
+		start1 -> mmcs_reset -> mmcs_wait -> mmcs_cmd17 -> mmcs_receive_rt -> mmcs_wait_for_start_byte 
+			-> mmcs_receive_segments -> mmcs_receive_crc -> mmcs_wait;
+
+		//{rank=same; start1 mmcs_reset mcs_wait mmcs_cmd17 mmcs_receive_rt mmcs_wait_for_start_byte 
+		//	mmcs_receive_segments mmcs_receive_crc mmcs_wait}
+
+		mmcs_wait_for_start_byte -> mmcs_wait_for_start_byte;
+		mmcs_receive_rt -> mmcs_error_reader [label="error"];
+		mmcs_wait -> mmcs_reset;
+		mmcs_error_reader -> mmcs_error_reader;
+	}
+}

@@ -159,7 +159,7 @@ begin
             
             case mmc_state is
 				
-               when mmcs_reset =>
+               		when mmcs_reset =>
 					
 						reset_reset <= '1';
 					
