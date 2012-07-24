@@ -1,0 +1,12 @@
+digraph G {
+	rankdir=BT;
+	send17 [label="Send CMD 17" shape=record]
+	rcvS [label="Receive segment" shape=record]
+	rcvCrc [label="Receive CRC" shape=record]
+	rcvSb [label="Received start byte" shape=diamond]
+
+	send17 -> rcvSb
+	rcvSb -> rcvSb [label="No"]
+	rcvSb -> rcvS [label="Yes"]
+	rcvS -> rcvCrc
+}
