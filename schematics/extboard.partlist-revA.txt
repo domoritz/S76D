@@ -1,0 +1,40 @@
+Partlist
+
+Exported from extboard.sch at 24.07.2012 15:05:03
+
+EAGLE Version 6.2.0 Copyright (c) 1988-2012 CadSoft
+
+Assembly variant: 
+
+Part     Value          Device          Package         Library     Sheet	Supplier	Part No.	Price (inc. VAT)
+
+== NO SUPPLIER YET ==
+C1A      2u2            CPOL-EUE2.5-7   E2,5-7          rcl         1
+C1B      2u2            CPOL-EUE2.5-7   E2,5-7          rcl         1
+C2A      2u2            CPOL-EUE2.5-7   E2,5-7          rcl         1
+C2B      2u2            CPOL-EUE2.5-7   E2,5-7          rcl         1
+C3A      0u1            C-EU050-035X075 C050-035X075    rcl         1
+C3B      0u1            C-EU050-035X075 C050-035X075    rcl         1
+C4A      0u1            C-EU050-035X075 C050-035X075    rcl         1
+C4B      0u1            C-EU050-035X075 C050-035X075    rcl         1
+J1                      MA03-1          MA03-1          con-lstb    1
+J2                      MA03-1          MA03-1          con-lstb    1
+R1A      250            R-EU_0207/10    0207/10         rcl         1
+R1B      250            R-EU_0207/10    0207/10         rcl         1
+R2A      10             R-EU_0207/10    0207/10         rcl         1
+R2B      10             R-EU_0207/10    0207/10         rcl         1
+R3A      10k            R-EU_0207/10    0207/10         rcl         1
+R3B      10k            R-EU_0207/10    0207/10         rcl         1
+R4       10k            R-EU_0207/10    0207/10         rcl         1
+R5       10k            R-EU_0207/10    0207/10         rcl         1
+U1       LTC1257        LTC1257         DIL-8           ltc1257     1
+U2       LTC1257        LTC1257         DIL-8           ltc1257     1
+X3-BRD                  MA20-2W         MA20-2W         con-lstb    1
+
+== FARNELL PARTS ==
+U1       LTC1257        LTC1257         DIL-8           ltc1257     1		Farnell		9560963		9,74
+U2       LTC1257        LTC1257         DIL-8           ltc1257     1		Farnell		9560963		9,74
+X1-SD                   SDBMF           SDBMF-009XXBXX2 farnell-sd  1		Farnell		9186174		3,28
+X2-JACK  1503_02        1503_02         1503_02         con-lumberg 1		Farnell		1216979		2,06
+--	 -------	-------		-------		-------	    -           Farnell		1654374		0,52
+--	 -------	-------		-------		-------	    -           Farnell		1654374		0,52
