@@ -5,42 +5,58 @@ digraph G {
 	start1 [shape=point];
 	mmcs_ready [peripheries=2];
 
-	DUMMY_0 -> DUMMY_1 [ltail=cluster_0, lhead=cluster_1];
+	DUMMY_0 -> DUMMY_1 [ltail=cluster_0 lhead=cluster_1 label="initializer_ready = '1'"];
 
 	subgraph cluster_0 {
-		label = "initializer";
+		label = "STATE_T_INITIALIZING";
 
 		DUMMY_0 [shape=point style=invis]
 
 		mmcs_error_initializer [label=mmcs_error];
-		start0 -> mmcs_init_wait -> mmcs_cmd0 -> mmcs_cmd0_response -> mmcs_cmd1 
-			-> mmcs_cmd1_wait -> mmcs_cmd16_prepare -> mmcs_cmd16 -> mmcs_cmd16_response -> mmcs_ready;
+		start0 -> mmcs_init_wait 
+		mmcs_init_wait -> mmcs_cmd0 [label="mmc_init_wait_counter = 0"] 
+		mmcs_cmd0 -> mmcs_cmd0_response [label="mmc_cmd0 = \"01{48}\""]
+		mmcs_cmd0_response -> mmcs_cmd1 [label="mmc_receive_rt = \"0{7}1\""] 
+		mmcs_cmd1 -> mmcs_cmd1_wait [label="mmc_cmd1 = \"01{48}\""]
+		mmcs_cmd1_wait -> mmcs_cmd16_prepare [label="mmc_cmd1_wait = \"0{8}\""]
+		mmcs_cmd1_wait -> mmcs_cmd1 [label="mmc_cmd1_wait(7) = '1' and mmc_cmd1_wait != \"0{8}\""]
+		mmcs_cmd16_prepare -> mmcs_cmd16 [label="mmc_cmd16_wait = \"0{16}\""]
+		mmcs_cmd16 -> mmcs_cmd16_response [label="finsihed sending cmd 16"]
+		mmcs_cmd16_response-> mmcs_ready [label="mmc_receive_rt(7) != '1' and mmc_receive_rt = \"0{8}\""];
+		mmcs_ready -> mmcs_ready;
 
 		//{rank=same; start0 mmcs_init_wait mmcs_cmd0 mmcs_cmd0_response mmcs_cmd1 mmcs_cmd1_wait 
 		//	mmcs_cmd16_prepare mmcs_cmd16 mmcs_cmd16_response mmcs_ready}
 
 		mmcs_cmd16_response -> mmcs_error_initializer [label="error"];
-		mmcs_init_wait -> mmcs_init_wait;
 		mmcs_cmd0_response -> mmcs_error_initializer [label="error"];
-		mmc_cmd_wait -> mmcs_cmd1;
 		mmcs_error_initializer -> mmcs_error_initializer;
 	}
 
 	subgraph cluster_1 {
-		label = "reader";
+		label = "STATE_T_READY";
 
 		DUMMY_1 [shape=point style=invis]
 
 		mmcs_error_reader [label=mmcs_error];
-		start1 -> mmcs_reset -> mmcs_wait -> mmcs_cmd17 -> mmcs_receive_rt -> mmcs_wait_for_start_byte 
-			-> mmcs_receive_segments -> mmcs_receive_crc -> mmcs_wait;
+
+		start1 -> mmcs_reset
+		mmcs_reset -> mmcs_wait
+		mmcs_wait -> mmcs_cmd17 [label="reset_request = '0' and fifo_prog_full = '0' and enabled = '1'"]
+		mmcs_wait -> mmcs_reset [label="reset_request = '0' and enabled = '0'"]
+		mmcs_wait -> mmcs_reset [label="reset_request = '0' and enabled = '0'"] 
+		mmc_wait -> mmc_reset [label="reset_request = '1'"]
+		mmcs_cmd17 -> mmcs_receive_rt [label="finished sending"]
+		mmcs_receive_rt -> mmcs_wait_for_start_byte [label="mmc_receive_rt = \"0{8}\""]
+		mmcs_wait_for_start_byte -> mmcs_receive_segments [label="mmc_miso = '0'"]
+		mmcs_receive_segments -> mmcs_receive_crc [label="mmc_segments_read >= MMC_SEGMENTS_TO_READ"]
+		mmcs_receive_crc -> mmcs_wait [label="mmc_receive_crc(CRC_WIDTH) = '1'"]
 
 		//{rank=same; start1 mmcs_reset mcs_wait mmcs_cmd17 mmcs_receive_rt mmcs_wait_for_start_byte 
 		//	mmcs_receive_segments mmcs_receive_crc mmcs_wait}
 
 		mmcs_wait_for_start_byte -> mmcs_wait_for_start_byte;
 		mmcs_receive_rt -> mmcs_error_reader [label="error"];
-		mmcs_wait -> mmcs_reset;
 		mmcs_error_reader -> mmcs_error_reader;
 	}
 }

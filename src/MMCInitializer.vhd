@@ -258,6 +258,7 @@ begin
 --				MMCCmd[5] = 0xFF; 
 			
 				if mmc_cmd16 = "1111111111111111111111111111111111111111111111111" then
+					-- set command
 					mmc_cmd16 <= "01010000" & -- 0x50
 						"00000000" & -- 0x00
 						"00000000" & -- 0x00
@@ -266,12 +267,12 @@ begin
 						"11111111" & -- 0xFF
 						"0";
 				elsif not (mmc_cmd16 = "0111111111111111111111111111111111111111111111111") then
-					
+					-- sending
 					mmc_mosi <= mmc_cmd16(48);
 					mmc_cmd16 <= mmc_cmd16(47 downto 0) & '1';
 				
 				else
-					
+					-- finished sending
 					mmc_receive_rt <= (others => '1');
 					mmc_new_state <= mmcs_cmd16_response;
 					

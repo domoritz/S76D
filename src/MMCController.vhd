@@ -81,14 +81,6 @@ signal initializer_mmc_mosi : STD_LOGIC := 'Z';
 signal reader_mmc_cs : STD_LOGIC := 'Z';
 signal reader_mmc_mosi : STD_LOGIC := 'Z';
 
---signal fifo_rst : STD_LOGIC;
---signal fifo_wr_clk : STD_LOGIC;
---signal fifo_din : STD_LOGIC_VECTOR(15 DOWNTO 0);
---signal fifo_wr_en : STD_LOGIC;
---signal fifo_full : STD_LOGIC;
---signal fifo_wr_data_count : STD_LOGIC_VECTOR(13 DOWNTO 0);
---signal fifo_prog_full : STD_LOGIC;
-
 signal pcm_word : STD_LOGIC_VECTOR(15 downto 0) := (others => '0');
 signal wave_word : STD_LOGIC_VECTOR(15 downto 0) := (others => '0');
 

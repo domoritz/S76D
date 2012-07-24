@@ -1,1 +1,1 @@
-dot -Tsvg mmc_controller.dot > mmc_controller.svg
+dot -Tpdf mmc_controller.dot > mmc_controller.pdf
