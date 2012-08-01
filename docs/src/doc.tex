@@ -79,13 +79,17 @@ Pin. No.   & Name    & Description	    & Note for our implementation \\ \hline
 
 \subsection{SPI Interface}
 
+\image{0.8\textwidth}{../spi_mmc_command.pdf}{Sending a command to the MMC}{ht}
+
+The start byte (SB) consists of 8 times HI (1). Before that, the card only sends 0s. The response token (RT) consists of 8 bits. Each bit indicates a certain error or a successful command. In case the command finished successfully, the card returns \texttt{0000 0001}
+
 \subsubsection{Initializing the card}
 
-\image{0.4\textwidth}{../flow_init_mmc.pdf}{Flow for initializing}{ht}
+\image{0.5\textwidth}{../flow_init_mmc.pdf}{Flow for initializing}{ht}
 
 \subsubsection{Reading data}
 
-\image{0.4\textwidth}{../flow_read_mmc.pdf}{Flow for reading}{ht}
+\image{0.5\textwidth}{../flow_read_mmc.pdf}{Flow for reading}{ht}
 
 \subsection{Implementation of Communication}
 \image{1.0\textwidth}{../mmc_controller.pdf}{Controller VHDL FSM}{ht}
