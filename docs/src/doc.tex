@@ -1,0 +1,66 @@
+\documentclass[12pt, a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage{cite}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{url}
+\usepackage[pdftex]{graphicx}
+\usepackage{xifthen}
+\usepackage{wrapfig}
+\usepackage{abstract}
+
+\graphicspath{{../}}
+
+
+%% Einbinden von Bildern
+%%
+%% Aufruf: \image{#1}{#2}{#3}{#4}
+%% #1 ...: Bildbreite
+%% #2 ...: Dateiname
+%%         Der Dateiname mmit davor gesetztem „fig:“ ist gleichzeitig
+%%         der Name ueber den das Bild referenziert werden kann.
+%% #3 ...: Bildunterschrift
+%% #4 ...: Position wo das Bild erscheinen soll
+\newcommand{\image}[4]{
+	\begin{figure}[#4]               %% Beginn der Gleitumgebung
+		\centering                     %% Bild zentrieren
+		\includegraphics[width=#1]{#2} %% Bild laden
+		\caption{#3}                   %% Bildunterschrift
+		\label{fig:#2}                 %% Label fuer Referenzierung
+	\end{figure}                     %% Ende der Gleitumgebung
+}
+
+\title{Singing Very High Speed Integrated Circuit Hardware Description Language Board}
+\author{
+        Kai Fabian \\
+        Hasso-Plattner-Institut Potsdam\\
+            \and
+        Dominik Moritz \\
+        Hasso-Plattner-Institut Potsdam\\
+}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This is time for all good men to come to the aid of their party! \ldots
+\end{abstract}
+
+\tableofcontents
+
+\section{Introduction}
+
+\section{Multimedia Card}
+
+\image{0.49\textwidth}{../mmc_pins.png}{MMC Interface}{ht}
+
+\subsection{SPI Interface}
+
+\image{\textwidth}{../mmc_controller.pdf}{Controller VHDL FSM}{ht}
+
+\listoffigures
+
+\end{document}
+This is never printed
