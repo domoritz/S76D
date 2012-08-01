@@ -50,7 +50,7 @@ digraph G {
 		edge[weight=2]
 		start1 -> mmcs_reset
 		mmcs_reset -> mmcs_wait
-		mmcs_wait -> mmcs_cmd17 [label="reset_request = '0' and fifo_prog_full = '0' and enabled = '1'"]
+		mmcs_wait -> mmcs_cmd17 [label="reset_request = '0' \nand fifo_prog_full = '0' \nand enabled = '1'"]
 		mmcs_cmd17 -> mmcs_receive_rt [label="finished sending"]
 		mmcs_receive_rt -> mmcs_wait_for_start_byte [label="mmc_receive_rt = \"0{8}\""]
 		mmcs_wait_for_start_byte -> mmcs_receive_segments [label="mmc_miso = '0'"]
@@ -61,11 +61,10 @@ digraph G {
 
 		edge[weight=1]
 
-		mmcs_wait -> mmcs_reset [label="reset_request = '0' and enabled = '0'"]
-		mmcs_wait -> mmcs_reset [label="reset_request = '0' and enabled = '0'"] 
-		mmc_wait -> mmc_reset [label="reset_request = '1'"]
+		mmcs_wait -> mmcs_reset [label="reset_request = '0' \nand enabled = '0'"]
+		mmcs_wait -> mmcs_reset [label="reset_request = '1'"]
 		mmcs_receive_crc -> mmcs_wait [label="mmc_receive_crc(CRC_WIDTH) = '1'"]
-		
+
 		mmcs_wait_for_start_byte -> mmcs_wait_for_start_byte;
 		mmcs_receive_rt -> mmcs_error_reader [label="error"];
 		mmcs_error_reader -> mmcs_error_reader;

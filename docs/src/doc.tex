@@ -1,0 +1,100 @@
+\documentclass[12pt, a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage{cite}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{url}
+\usepackage[pdftex]{graphicx}
+\usepackage{xifthen}
+\usepackage{wrapfig}
+\usepackage{abstract}
+\usepackage[cm]{fullpage}
+
+\graphicspath{{../}}
+
+
+%% Einbinden von Bildern
+%%
+%% Aufruf: \image{#1}{#2}{#3}{#4}
+%% #1 ...: Bildbreite
+%% #2 ...: Dateiname
+%%         Der Dateiname mmit davor gesetztem „fig:“ ist gleichzeitig
+%%         der Name ueber den das Bild referenziert werden kann.
+%% #3 ...: Bildunterschrift
+%% #4 ...: Position wo das Bild erscheinen soll
+\newcommand{\image}[4]{
+	\begin{figure}[#4]               %% Beginn der Gleitumgebung
+		\centering                     %% Bild zentrieren
+		\includegraphics[width=#1]{#2} %% Bild laden
+		\caption{#3}                   %% Bildunterschrift
+		\label{fig:#2}                 %% Label fuer Referenzierung
+	\end{figure}                     %% Ende der Gleitumgebung
+}
+
+\title{Singing Very High Speed Integrated Circuit Hardware Description Language Board (S76D)}
+\author{
+        Kai Fabian \\
+        Hasso-Plattner-Institut Potsdam\\
+            \and
+        Dominik Moritz \\
+        Hasso-Plattner-Institut Potsdam\\
+}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This is time for all good men to come to the aid of their party! \ldots
+\end{abstract}
+
+\tableofcontents
+
+\section{Introduction}
+
+\section{Multimedia Card}
+
+\subsection{Interface description}
+
+\image{0.3\textwidth}{../mmc_pins.png}{MMC Interface}{ht}
+
+\begin{table}
+    \begin{tabular}{|l|l|l|p{8cm}|}
+    \hline
+Pin. No.   & Name    & Description	    & Note for our implementation \\ \hline
+1	       & DAT3	 & MMC: Chip select & Chip IO Pin, mmc\_cs, D7 \\
+2	       & CMD	 & Command 	        & Chip IO Pin,  mmc\_mosi, D8, (MOSI – master out, slave in) \\
+3	       & GND	 & Ground	        & Board ground \\
+4	       & VDD	 & Voltage	        & Supply Voltage (+3.3 V) \\
+5	       & CLK	 & Clock	        & Chip IO Pin,  mmc\_clock, D10 \\
+6	       & GND	 & Ground	        & Board ground \\
+7	       & DAT0	 & Data	            & Chip IO,  mmc\_miso, B4 \\
+8	       & DAT1	 & Data	            & Pull up (Voltage via resistor) \\
+9	       & DAT2	 & Data	            & Pull up (Voltage via resistor) \\
+	\hline
+    \end{tabular}
+\end{table}
+
+
+\subsection{SPI Interface}
+
+\image{0.8\textwidth}{../spi_mmc_command.pdf}{Sending a command to the MMC}{ht}
+
+The start byte (SB) consists of 8 times HI (1). Before that, the card only sends 0s. The response token (RT) consists of 8 bits. Each bit indicates a certain error or a successful command. In case the command finished successfully, the card returns \texttt{0000 0001}
+
+\subsubsection{Initializing the card}
+
+\image{0.5\textwidth}{../flow_init_mmc.pdf}{Flow for initializing}{ht}
+
+\subsubsection{Reading data}
+
+\image{0.5\textwidth}{../flow_read_mmc.pdf}{Flow for reading}{ht}
+
+\subsection{Implementation of Communication}
+\image{1.0\textwidth}{../mmc_controller.pdf}{Controller VHDL FSM}{ht}
+
+\listoffigures
+
+\end{document}
+This is never printed
