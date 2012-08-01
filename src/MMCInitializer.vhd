@@ -135,7 +135,7 @@ begin
 							"00000000" & -- 0x00
 							"00000000" & -- 0x00
 							"00000000" & -- 0x00
-							"10010101" & -- 0x95 -- wichtig: hier richtiger crc, da noch nicht im spi modus
+							"10010101" & -- 0x95 -- important: use the right crc because the card in not in spi mode yet
 							"0";
 					elsif not (mmc_cmd0 = "0111111111111111111111111111111111111111111111111") then
 						
