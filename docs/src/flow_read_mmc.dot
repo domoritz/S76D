@@ -1,0 +1,11 @@
+digraph G {
+	send17 [label="Send CMD 17\nsend a block of data" shape=record]
+	rcvS [label="Receive segment" shape=record]
+	rcvCrc [label="Receive CRC" shape=record]
+	rcvSb [label="Received start byte" shape=diamond]
+
+	send17 -> rcvSb
+	rcvSb -> rcvSb:n [label="No"]
+	rcvSb -> rcvS [label="Yes"]
+	rcvS -> rcvCrc
+}

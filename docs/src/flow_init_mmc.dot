@@ -1,0 +1,18 @@
+digraph G {
+	splines=true; sep=1;
+	
+	clockdelay [label="Clock delay\nMinimum 74 clock cycle units" shape=record]
+	cmd0 [label="<b>Send CMD 0\nreset card" shape=record]
+	cmd1 [label="Send CMD 1\ncard init process" shape=record]
+	complete [label="Init process complete?" shape=diamond]
+	ready [label="Card is ready" shape=ellipse]
+
+	edge[weight=2]
+	clockdelay -> cmd0
+	cmd0 -> cmd1
+	cmd1 -> complete:n
+	complete:s -> ready [label="Yes"]
+
+	edge[weight=1]
+	complete:ne -> cmd1 [label="No"]
+}
