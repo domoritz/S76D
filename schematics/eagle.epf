@@ -360,6 +360,14 @@ UsedLibrary="lm4140.lbr"
 UsedLibrary="farnell-sd.lbr"
 
 [Win_1]
+Type="CAM Processor"
+Loc="225 225 824 660"
+State=2
+Number=3
+File="extboard.brd"
+Job="C:/Program Files (x86)/EAGLE-6.2.0/cam/sfe-gerb274x+partnames.cam"
+
+[Win_2]
 Type="Control Panel"
 Loc="882 342 1481 752"
 State=1
@@ -368,3 +376,4 @@ Number=0
 [Desktop]
 Screen="1920 1080"
 Window="Win_1"
+Window="Win_2"

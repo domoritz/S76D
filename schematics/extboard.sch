@@ -12795,41 +12795,109 @@ Jack connectors - 2005.11.23&lt;p&gt;
 http://www.lumberg.de&lt;p&gt;
 &lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
 <packages>
-<package name="1503_02">
+<package name="1503_07">
 <description>&lt;b&gt;Jack connectors according to JISC 6560, 3.5 mm&lt;/b&gt;&lt;p&gt;
-Klinkeneinbaukupplung nach JISC 6560, 3,5 mm, 3-polig/stereo,&lt;br&gt;
-abgewinkelte Ausführung, Surface-Mount-Technik (SMT)&lt;p&gt;
-Source: http://www.lumberg.com/Produkte/PDFs/1503_02.pdf</description>
-<wire x1="-3.15" y1="-11.4" x2="-3.15" y2="-0.1" width="0.2032" layer="51"/>
-<wire x1="-3.15" y1="-0.1" x2="3.15" y2="-0.1" width="0.2032" layer="21"/>
-<wire x1="3.15" y1="-0.1" x2="3.15" y2="-11.4" width="0.2032" layer="51"/>
-<wire x1="3.15" y1="-11.4" x2="-3.15" y2="-11.4" width="0.2032" layer="51"/>
-<wire x1="-2.4" y1="2.4" x2="2.4" y2="2.4" width="0.2032" layer="21"/>
-<wire x1="-2.4" y1="0" x2="-2.4" y2="2.4" width="0.2032" layer="21"/>
-<wire x1="2.4" y1="0" x2="2.4" y2="2.4" width="0.2032" layer="21"/>
-<wire x1="-4.45" y1="-1.2" x2="-3.35" y2="-1.2" width="0.6" layer="51"/>
-<wire x1="-3.35" y1="-1.2" x2="-3.35" y2="-2.6" width="0.6" layer="51"/>
-<wire x1="-3.35" y1="-2.6" x2="-4.45" y2="-2.6" width="0.6" layer="51"/>
-<wire x1="4.45" y1="-2.6" x2="3.35" y2="-2.6" width="0.6" layer="51"/>
-<wire x1="3.35" y1="-2.6" x2="3.35" y2="-1.2" width="0.6" layer="51"/>
-<wire x1="3.35" y1="-1.2" x2="4.45" y2="-1.2" width="0.6" layer="51"/>
-<wire x1="-4.45" y1="-10.3" x2="-3.35" y2="-10.3" width="0.6" layer="51"/>
-<wire x1="-3.35" y1="-10.3" x2="-3.35" y2="-11.2" width="0.6" layer="51"/>
-<wire x1="-3.35" y1="-11.2" x2="-4.45" y2="-11.2" width="0.6" layer="51"/>
-<wire x1="4.45" y1="-11.2" x2="3.35" y2="-11.2" width="0.6" layer="51"/>
-<wire x1="3.35" y1="-11.2" x2="3.35" y2="-10.3" width="0.6" layer="51"/>
-<wire x1="3.35" y1="-10.3" x2="4.45" y2="-10.3" width="0.6" layer="51"/>
-<wire x1="-3.15" y1="-9.4" x2="-3.15" y2="-3.6" width="0.2032" layer="21"/>
-<wire x1="3.15" y1="-3.6" x2="3.15" y2="-9.4" width="0.2032" layer="21"/>
-<wire x1="2.15" y1="-11.4" x2="-2.15" y2="-11.4" width="0.2032" layer="21"/>
-<smd name="2" x="-3.75" y="-1.9" dx="2.5" dy="2" layer="1"/>
-<smd name="2@2" x="3.75" y="-1.9" dx="2.5" dy="2" layer="1"/>
-<smd name="1" x="-3.75" y="-10.75" dx="2.5" dy="1.5" layer="1" rot="R180"/>
-<smd name="3" x="3.75" y="-10.75" dx="2.5" dy="1.5" layer="1" rot="R180"/>
-<text x="-5.08" y="-9.525" size="1.27" layer="25" rot="R90">&gt;NAME</text>
-<text x="6.35" y="-10.16" size="1.27" layer="27" rot="R90">&gt;VALUE</text>
+Klinkensteckverbinder nach JISC 6560, 3,5 mm&lt;br&gt;
+Source: http://www.lumberg.com/Produkte/PDFs/1503_07.pdf</description>
+<wire x1="-3.4" y1="-10.75" x2="-3" y2="-10.35" width="0" layer="46" curve="-90"/>
+<wire x1="-3" y1="-10.35" x2="-2.6" y2="-10.75" width="0" layer="46" curve="-90"/>
+<wire x1="-2.6" y1="-10.75" x2="-2.6" y2="-11.25" width="0" layer="46"/>
+<wire x1="-2.6" y1="-11.25" x2="-3" y2="-11.65" width="0" layer="46" curve="-90"/>
+<wire x1="-3" y1="-11.65" x2="-3.4" y2="-11.25" width="0" layer="46" curve="-90"/>
+<wire x1="-3.4" y1="-11.25" x2="-3.4" y2="-10.75" width="0" layer="46"/>
+<wire x1="2.6" y1="-10.75" x2="3" y2="-10.35" width="0" layer="46" curve="-90"/>
+<wire x1="3" y1="-10.35" x2="3.4" y2="-10.75" width="0" layer="46" curve="-90"/>
+<wire x1="3.4" y1="-10.75" x2="3.4" y2="-11.25" width="0" layer="46"/>
+<wire x1="3.4" y1="-11.25" x2="3" y2="-11.65" width="0" layer="46" curve="-90"/>
+<wire x1="3" y1="-11.65" x2="2.6" y2="-11.25" width="0" layer="46" curve="-90"/>
+<wire x1="2.6" y1="-11.25" x2="2.6" y2="-10.75" width="0" layer="46"/>
+<wire x1="-3.2" y1="-1.85" x2="-2.7" y2="-1.35" width="0" layer="46" curve="-90"/>
+<wire x1="-2.7" y1="-1.35" x2="-2.2" y2="-1.85" width="0" layer="46" curve="-90"/>
+<wire x1="-2.2" y1="-1.85" x2="-2.2" y2="-2.15" width="0" layer="46"/>
+<wire x1="-2.2" y1="-2.15" x2="-2.7" y2="-2.65" width="0" layer="46" curve="-90"/>
+<wire x1="-2.7" y1="-2.65" x2="-3.2" y2="-2.15" width="0" layer="46" curve="-90"/>
+<wire x1="-3.2" y1="-2.15" x2="-3.2" y2="-1.85" width="0" layer="46"/>
+<wire x1="2.7" y1="-2.65" x2="2.2" y2="-2.15" width="0" layer="46" curve="-90"/>
+<wire x1="2.2" y1="-2.15" x2="2.2" y2="-1.85" width="0" layer="46"/>
+<wire x1="2.2" y1="-1.85" x2="2.7" y2="-1.35" width="0" layer="46" curve="-90"/>
+<wire x1="2.7" y1="-1.35" x2="3.2" y2="-1.85" width="0" layer="46" curve="-90"/>
+<wire x1="3.2" y1="-1.85" x2="3.2" y2="-2.15" width="0" layer="46"/>
+<wire x1="3.2" y1="-2.15" x2="2.7" y2="-2.65" width="0" layer="46" curve="-90"/>
+<wire x1="-3.15" y1="2.4" x2="3.15" y2="2.4" width="0.2032" layer="21"/>
+<wire x1="3.15" y1="2.4" x2="3.15" y2="-0.7" width="0.2032" layer="21"/>
+<wire x1="3.15" y1="-0.7" x2="3.15" y2="-3.3" width="0.2032" layer="51"/>
+<wire x1="3.15" y1="-3.3" x2="3.15" y2="-9.5" width="0.2032" layer="21"/>
+<wire x1="3.15" y1="-9.5" x2="3.15" y2="-10.9" width="0.2032" layer="51"/>
+<wire x1="3.15" y1="-10.9" x2="2.1" y2="-10.9" width="0.2032" layer="51"/>
+<wire x1="2.1" y1="-10.9" x2="-2.1" y2="-10.9" width="0.2032" layer="21"/>
+<wire x1="-2.1" y1="-10.9" x2="-3.15" y2="-10.9" width="0.2032" layer="51"/>
+<wire x1="-3.15" y1="-10.9" x2="-3.15" y2="-9.55" width="0.2032" layer="51"/>
+<wire x1="-3.15" y1="-9.55" x2="-3.15" y2="-3.5" width="0.2032" layer="21"/>
+<wire x1="-3.15" y1="-3.5" x2="-3.15" y2="-0.55" width="0.2032" layer="51"/>
+<wire x1="-3.15" y1="-0.55" x2="-3.15" y2="2.4" width="0.2032" layer="21"/>
+<wire x1="-2.4" y1="4.9" x2="2.4" y2="4.9" width="0.2032" layer="21"/>
+<wire x1="-2.4" y1="2.5" x2="-2.4" y2="4.9" width="0.2032" layer="21"/>
+<wire x1="2.4" y1="2.5" x2="2.4" y2="4.9" width="0.2032" layer="21"/>
+<pad name="1" x="-3" y="-11" drill="1" diameter="1.2" shape="long" rot="R90"/>
+<pad name="3" x="3" y="-11" drill="1" diameter="1.2" shape="long" rot="R90"/>
+<pad name="2@1" x="-2.7" y="-2" drill="1" diameter="1.2" shape="long" rot="R90"/>
+<pad name="2@2" x="2.7" y="-2" drill="1" diameter="1.2" shape="long" rot="R90"/>
+<text x="-4.452" y="-10.812" size="1.27" layer="25" rot="R90">&gt;NAME</text>
+<text x="5.088" y="-10.812" size="1.27" layer="27" rot="R90">&gt;VALUE</text>
 <hole x="-2.5" y="-7" drill="1"/>
 <hole x="2.5" y="-7" drill="1"/>
+</package>
+<package name="1503_08">
+<description>&lt;b&gt;Jack connectors according to JISC 6560, 3.5 mm&lt;/b&gt;&lt;p&gt;
+Klinkensteckverbinder nach JISC 6560, 3,5 mm&lt;br&gt;
+Source: http://www.lumberg.com/Produkte/PDFs/1503_08.pdf</description>
+<wire x1="-3.3" y1="-7.75" x2="-2.9" y2="-7.35" width="0" layer="46" curve="-90"/>
+<wire x1="-2.9" y1="-7.35" x2="-2.5" y2="-7.75" width="0" layer="46" curve="-90"/>
+<wire x1="-2.5" y1="-7.75" x2="-2.5" y2="-8.25" width="0" layer="46"/>
+<wire x1="-2.5" y1="-8.25" x2="-2.9" y2="-8.65" width="0" layer="46" curve="-90"/>
+<wire x1="-2.9" y1="-8.65" x2="-3.3" y2="-8.25" width="0" layer="46" curve="-90"/>
+<wire x1="-3.3" y1="-8.25" x2="-3.3" y2="-7.75" width="0" layer="46"/>
+<wire x1="2.5" y1="-7.75" x2="2.9" y2="-7.35" width="0" layer="46" curve="-90"/>
+<wire x1="2.9" y1="-7.35" x2="3.3" y2="-7.75" width="0" layer="46" curve="-90"/>
+<wire x1="3.3" y1="-7.75" x2="3.3" y2="-8.25" width="0" layer="46"/>
+<wire x1="3.3" y1="-8.25" x2="2.9" y2="-8.65" width="0" layer="46" curve="-90"/>
+<wire x1="2.9" y1="-8.65" x2="2.5" y2="-8.25" width="0" layer="46" curve="-90"/>
+<wire x1="2.5" y1="-8.25" x2="2.5" y2="-7.75" width="0" layer="46"/>
+<wire x1="-3.7" y1="0.15" x2="-3.2" y2="0.65" width="0" layer="46" curve="-90"/>
+<wire x1="-3.2" y1="0.65" x2="-2.7" y2="0.15" width="0" layer="46" curve="-90"/>
+<wire x1="-2.7" y1="0.15" x2="-2.7" y2="-0.15" width="0" layer="46"/>
+<wire x1="-2.7" y1="-0.15" x2="-3.2" y2="-0.65" width="0" layer="46" curve="-90"/>
+<wire x1="-3.2" y1="-0.65" x2="-3.7" y2="-0.15" width="0" layer="46" curve="-90"/>
+<wire x1="-3.7" y1="-0.15" x2="-3.7" y2="0.15" width="0" layer="46"/>
+<wire x1="3.2" y1="-0.65" x2="2.7" y2="-0.15" width="0" layer="46" curve="-90"/>
+<wire x1="2.7" y1="-0.15" x2="2.7" y2="0.15" width="0" layer="46"/>
+<wire x1="2.7" y1="0.15" x2="3.2" y2="0.65" width="0" layer="46" curve="-90"/>
+<wire x1="3.2" y1="0.65" x2="3.7" y2="0.15" width="0" layer="46" curve="-90"/>
+<wire x1="3.7" y1="0.15" x2="3.7" y2="-0.15" width="0" layer="46"/>
+<wire x1="3.7" y1="-0.15" x2="3.2" y2="-0.65" width="0" layer="46" curve="-90"/>
+<wire x1="-3.4" y1="3.4" x2="3.4" y2="3.4" width="0.2032" layer="21"/>
+<wire x1="3.4" y1="3.4" x2="3.4" y2="1.3" width="0.2032" layer="21"/>
+<wire x1="3.4" y1="1.3" x2="3.4" y2="-1.3" width="0.2032" layer="51"/>
+<wire x1="3.4" y1="-1.3" x2="3.4" y2="-6.5" width="0.2032" layer="21"/>
+<wire x1="3.4" y1="-6.5" x2="3.4" y2="-7.9" width="0.2032" layer="51"/>
+<wire x1="3.4" y1="-7.9" x2="2.1" y2="-7.9" width="0.2032" layer="51"/>
+<wire x1="2.1" y1="-7.9" x2="-2.1" y2="-7.9" width="0.2032" layer="21"/>
+<wire x1="-2.1" y1="-7.9" x2="-3.4" y2="-7.9" width="0.2032" layer="51"/>
+<wire x1="-3.4" y1="-7.9" x2="-3.4" y2="-6.55" width="0.2032" layer="51"/>
+<wire x1="-3.4" y1="-6.55" x2="-3.4" y2="-1.5" width="0.2032" layer="21"/>
+<wire x1="-3.4" y1="-1.5" x2="-3.4" y2="1.45" width="0.2032" layer="51"/>
+<wire x1="-3.4" y1="1.45" x2="-3.4" y2="3.4" width="0.2032" layer="21"/>
+<wire x1="-3.1" y1="5.9" x2="3.1" y2="5.9" width="0.2032" layer="21"/>
+<wire x1="-3.1" y1="3.5" x2="-3.1" y2="5.9" width="0.2032" layer="21"/>
+<wire x1="3.1" y1="3.5" x2="3.1" y2="5.9" width="0.2032" layer="21"/>
+<pad name="1" x="-2.9" y="-8" drill="1" diameter="1.2" shape="long" rot="R90"/>
+<pad name="3" x="2.9" y="-8" drill="1" diameter="1.2" shape="long" rot="R90"/>
+<pad name="2@1" x="-3.2" y="0" drill="1" diameter="1.2" shape="long" rot="R90"/>
+<pad name="2@2" x="3.2" y="0" drill="1" diameter="1.2" shape="long" rot="R90"/>
+<text x="-4.452" y="-8.812" size="1.27" layer="25" rot="R90">&gt;NAME</text>
+<text x="5.088" y="-8.812" size="1.27" layer="27" rot="R90">&gt;VALUE</text>
+<hole x="0" y="4.5" drill="1.2"/>
+<hole x="0" y="-5.5" drill="1.2"/>
 </package>
 </packages>
 <symbols>
@@ -12852,19 +12920,18 @@ Source: http://www.lumberg.com/Produkte/PDFs/1503_02.pdf</description>
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="1503_02" prefix="X">
+<deviceset name="1503_?" prefix="X">
 <description>&lt;b&gt;Jack connectors according to JISC 6560, 3.5 mm&lt;/b&gt;&lt;p&gt;
-Klinkeneinbaukupplung nach JISC 6560, 3,5 mm, 3-polig/stereo,&lt;br&gt;
-abgewinkelte Ausführung, Surface-Mount-Technik (SMT)&lt;p&gt;
-Source: http://www.lumberg.com/Produkte/PDFs/1503_02.pdf</description>
+Klinkensteckverbinder nach JISC 6560, 3,5 mm&lt;br&gt;
+Source: http://www.lumberg.com/Produkte/PDFs/1503_08.pdf</description>
 <gates>
 <gate name="G$1" symbol="JACK-STEREO-2" x="0" y="0"/>
 </gates>
 <devices>
-<device name="" package="1503_02">
+<device name="08" package="1503_08">
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="2" pad="2@1"/>
 <connect gate="G$1" pin="2@1" pad="2@2"/>
 <connect gate="G$1" pin="3" pad="3"/>
 </connects>
@@ -12872,7 +12939,23 @@ Source: http://www.lumberg.com/Produkte/PDFs/1503_02.pdf</description>
 <technology name="">
 <attribute name="MF" value="" constant="no"/>
 <attribute name="MPN" value="" constant="no"/>
-<attribute name="OC_FARNELL" value="1216979" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="unknown" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="07" package="1503_07">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2@1"/>
+<connect gate="G$1" pin="2@1" pad="2@2"/>
+<connect gate="G$1" pin="3" pad="3"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
 <attribute name="OC_NEWARK" value="unknown" constant="no"/>
 </technology>
 </technologies>
@@ -13075,8 +13158,8 @@ Herstellerbez.:  SDBMF-00915B0T2</description>
 <part name="P+1" library="supply1" deviceset="VCC" device=""/>
 <part name="P+2" library="supply1" deviceset="VCC" device=""/>
 <part name="P+24" library="supply1" deviceset="VCC" device=""/>
-<part name="C3A" library="rcl" deviceset="C-EU" device="050-035X075" value="0u1"/>
-<part name="C4A" library="rcl" deviceset="C-EU" device="050-035X075" value="0u1"/>
+<part name="C3A" library="rcl" deviceset="C-EU" device="050-025X075" value="0u1"/>
+<part name="C4A" library="rcl" deviceset="C-EU" device="050-025X075" value="0u1"/>
 <part name="C1A" library="rcl" deviceset="CPOL-EU" device="E2.5-7" value="2u2"/>
 <part name="C2A" library="rcl" deviceset="CPOL-EU" device="E2.5-7" value="2u2"/>
 <part name="U2" library="ltc1257" deviceset="LTC1257" device=""/>
@@ -13087,12 +13170,14 @@ Herstellerbez.:  SDBMF-00915B0T2</description>
 <part name="GND6" library="supply1" deviceset="GND" device=""/>
 <part name="GND8" library="supply1" deviceset="GND" device=""/>
 <part name="P+13" library="supply1" deviceset="VCC" device=""/>
-<part name="C3B" library="rcl" deviceset="C-EU" device="050-035X075" value="0u1"/>
-<part name="C4B" library="rcl" deviceset="C-EU" device="050-035X075" value="0u1"/>
+<part name="C3B" library="rcl" deviceset="C-EU" device="050-025X075" value="0u1"/>
+<part name="C4B" library="rcl" deviceset="C-EU" device="050-025X075" value="0u1"/>
 <part name="C2B" library="rcl" deviceset="CPOL-EU" device="E2.5-7" value="2u2"/>
 <part name="J1" library="con-lstb" deviceset="MA03-1" device=""/>
 <part name="J2" library="con-lstb" deviceset="MA03-1" device=""/>
-<part name="X2-JACK" library="con-lumberg" deviceset="1503_02" device=""/>
+<part name="X2-JACK" library="con-lumberg" deviceset="1503_?" device="07">
+<attribute name="OC_FARNELL" value="unknown"/>
+</part>
 <part name="X1-SD" library="farnell-sd" deviceset="SDBMF" device="" value=""/>
 <part name="C1B" library="rcl" deviceset="CPOL-EU" device="E2.5-7" value="2u2"/>
 <part name="J3" library="con-lstb" deviceset="MA03-1" device="">
