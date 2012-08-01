@@ -9,6 +9,7 @@
 \usepackage{xifthen}
 \usepackage{wrapfig}
 \usepackage{abstract}
+\usepackage[cm]{fullpage}
 
 \graphicspath{{../}}
 
@@ -31,7 +32,7 @@
 	\end{figure}                     %% Ende der Gleitumgebung
 }
 
-\title{Singing Very High Speed Integrated Circuit Hardware Description Language Board}
+\title{Singing Very High Speed Integrated Circuit Hardware Description Language Board (S76D)}
 \author{
         Kai Fabian \\
         Hasso-Plattner-Institut Potsdam\\
@@ -54,11 +55,40 @@ This is time for all good men to come to the aid of their party! \ldots
 
 \section{Multimedia Card}
 
-\image{0.49\textwidth}{../mmc_pins.png}{MMC Interface}{ht}
+\subsection{Interface description}
+
+\image{0.3\textwidth}{../mmc_pins.png}{MMC Interface}{ht}
+
+\begin{table}
+    \begin{tabular}{|l|l|l|p{8cm}|}
+    \hline
+Pin. No.   & Name    & Description	    & Note for our implementation \\ \hline
+1	       & DAT3	 & MMC: Chip select & Chip IO Pin, mmc\_cs, D7 \\
+2	       & CMD	 & Command 	        & Chip IO Pin,  mmc\_mosi, D8, (MOSI – master out, slave in) \\
+3	       & GND	 & Ground	        & Board ground \\
+4	       & VDD	 & Voltage	        & Supply Voltage (+3.3 V) \\
+5	       & CLK	 & Clock	        & Chip IO Pin,  mmc\_clock, D10 \\
+6	       & GND	 & Ground	        & Board ground \\
+7	       & DAT0	 & Data	            & Chip IO,  mmc\_miso, B4 \\
+8	       & DAT1	 & Data	            & Pull up (Voltage via resistor) \\
+9	       & DAT2	 & Data	            & Pull up (Voltage via resistor) \\
+	\hline
+    \end{tabular}
+\end{table}
+
 
 \subsection{SPI Interface}
 
-\image{\textwidth}{../mmc_controller.pdf}{Controller VHDL FSM}{ht}
+\subsubsection{Initializing the card}
+
+\image{0.4\textwidth}{../flow_init_mmc.pdf}{Flow for initializing}{ht}
+
+\subsubsection{Reading data}
+
+\image{0.4\textwidth}{../flow_read_mmc.pdf}{Flow for reading}{ht}
+
+\subsection{Implementation of Communication}
+\image{1.0\textwidth}{../mmc_controller.pdf}{Controller VHDL FSM}{ht}
 
 \listoffigures
 
