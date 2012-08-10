@@ -10,9 +10,9 @@
 \usepackage{wrapfig}
 \usepackage{abstract}
 \usepackage[cm]{fullpage}
+\usepackage{parskip}
 
 \graphicspath{{../}}
-
 
 %% Einbinden von Bildern
 %%
@@ -23,12 +23,13 @@
 %%         der Name ueber den das Bild referenziert werden kann.
 %% #3 ...: Bildunterschrift
 %% #4 ...: Position wo das Bild erscheinen soll
-\newcommand{\image}[4]{
+%% #5 ...: Label, Referenz
+\newcommand{\image}[5]{
 	\begin{figure}[#4]               %% Beginn der Gleitumgebung
 		\centering                     %% Bild zentrieren
 		\includegraphics[width=#1]{#2} %% Bild laden
 		\caption{#3}                   %% Bildunterschrift
-		\label{fig:#2}                 %% Label fuer Referenzierung
+		\label{fig:#5}                 %% Label fuer Referenzierung
 	\end{figure}                     %% Ende der Gleitumgebung
 }
 
@@ -45,7 +46,7 @@
 \begin{document}
 \maketitle
 
-\image{0.7\textwidth}{render.png}{3D rendered image of the custom extension board used for this music player}{ht}
+\image{0.7\textwidth}{render.png}{3D rendered image of the custom extension board used for this music player}{ht}{render}
 
 \begin{abstract}
 This is time for all good men to come to the aid of their party! \ldots
@@ -59,7 +60,7 @@ This is time for all good men to come to the aid of their party! \ldots
 
 \subsection{Interface description}
 
-\image{0.3\textwidth}{../mmc_pins.png}{MMC Interface}{ht}
+\image{0.3\textwidth}{../mmc_pins.png}{MMC Interface}{ht}{interface}
 
 \begin{table}
     \begin{tabular}{|l|l|l|p{8cm}|}
@@ -71,7 +72,7 @@ Pin. No.   & Name    & Description	    & Note for our implementation \\ \hline
 4	       & VDD	 & Voltage	        & Supply Voltage (+3.3 V) \\
 5	       & CLK	 & Clock	        & Chip IO Pin,  mmc\_clock, D10 \\
 6	       & GND	 & Ground	        & Board ground \\
-7	       & DAT0	 & Data	            & Chip IO,  mmc\_miso, B4 \\
+7	       & DAT0	 & Data	            & Chip IO,  mmc\_miso, B4, (MIDO - master in, slave out) \\
 8	       & DAT1	 & Data	            & Pull up (Voltage via resistor) \\
 9	       & DAT2	 & Data	            & Pull up (Voltage via resistor) \\
 	\hline
@@ -81,20 +82,24 @@ Pin. No.   & Name    & Description	    & Note for our implementation \\ \hline
 
 \subsection{SPI Interface}
 
-\image{0.8\textwidth}{../spi_mmc_command.pdf}{Sending a command to the MMC}{ht}
+The SPI Interface uses two connections to the MMC. First the \emph{master out, slave in} to send commands to the MMC and the \emph{master in, slave out} to receive the results from the MMC. You can see the pins on the MMC in figure \ref{fig:interface}.
 
-The start byte (SB) consists of 8 times HI (1). Before that, the card only sends 0s. The response token (RT) consists of 8 bits. Each bit indicates a certain error or a successful command. In case the command finished successfully, the card returns \texttt{0000 0001}
+\image{0.8\textwidth}{../spi_mmc_command.pdf}{Sending a command to the MMC}{ht}{command}
+
+Sending commands requires you to stick to a predefined protocol that we will describe. A basic sequence for one cammand can be found in figure \ref{fig:command}. In figure \ref{fig:init} and \ref{fig:read} you can find the sequence of commands we have to send to the card in order to initialize it or read a block. 
+
+Each command is a binary coded sequence in a format that is defined in the official reference manual. Figure \ref{fig:command} should give you a basic idea of how the communication works. The start byte (SB) consists of 8 times HI (1). Before that, the card only sends 0s. The response token (RT) consists of 8 bits. Each bit indicates a certain error or a successful command. In case the command finished successfully, the card returns \texttt{0000 0001}
 
 \subsubsection{Initializing the card}
 
-\image{0.5\textwidth}{../flow_init_mmc.pdf}{Flow for initializing}{ht}
+\image{0.5\textwidth}{../flow_init_mmc.pdf}{Flow for initializing}{ht}{init}
 
 \subsubsection{Reading data}
 
-\image{0.5\textwidth}{../flow_read_mmc.pdf}{Flow for reading}{ht}
+\image{0.5\textwidth}{../flow_read_mmc.pdf}{Flow for reading}{ht}{read}
 
 \subsection{Implementation of Communication}
-\image{1.0\textwidth}{../mmc_controller.pdf}{Controller VHDL FSM}{ht}
+\image{1.0\textwidth}{../mmc_controller.pdf}{Controller VHDL FSM}{ht}{implementation}
 
 \listoffigures
 
