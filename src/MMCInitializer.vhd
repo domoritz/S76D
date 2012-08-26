@@ -136,11 +136,11 @@ begin
 							"00000000" & -- 0x00
 							"00000000" & -- 0x00
 							"10010101" & -- 0x95 -- important: use the right crc because the card in not in spi mode yet
-							"0";
+							"0"; -- padding so that we can detect end of sending
 					elsif not (mmc_cmd0 = "0111111111111111111111111111111111111111111111111") then
 						
 						mmc_mosi <= mmc_cmd0(48);
-						mmc_cmd0 <= mmc_cmd0(47 downto 0) & '1';
+						mmc_cmd0 <= mmc_cmd0(47 downto 0) & '1'; -- append 1s
 					
 					else
 						

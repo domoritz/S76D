@@ -180,8 +180,6 @@ begin
 						mmc_cs <= '0';
 					
 						if reset_request = '0' then
-					
-					-- fifo_prog_full = '0' and
 							 if fifo_prog_full = '0' and enabled = '1' then
 							 
 								  mmc_new_state <= mmcs_cmd17;
