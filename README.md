@@ -8,7 +8,7 @@ The dream of every geeky hardware hacker has come true. We build a working MMC/S
 
 This Project started as a student project a few months ago and today we were able to play the first song. Hope you like it as much as we enjoyed finally hearing the board singing.
 
-If you want to know a little bit (:-P) more about the project or see nice picures go to [this blog post](http://www.domoritz.de/2012/03/singing_vhdl_board/) (German)
+If you want to know a little bit (:-P) more about the project or see nice picures go to [this blog post](http://domoritz.de/blog/2012/03/singing_vhdl_board/) (German)
 
 Demo video on [YouTube](http://www.youtube.com/watch?v=qsjFVgriZzY).
 
