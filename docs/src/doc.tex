@@ -49,7 +49,7 @@
 \image{0.7\textwidth}{render.png}{3D rendered image of the custom extension board used for this music player}{ht}{render}
 
 \begin{abstract}
-This is time for all good men to come to the aid of their party! \ldots
+A VHDL implementation of the MMC SPI interface \ldots
 \end{abstract}
 
 \tableofcontents
@@ -60,9 +60,11 @@ This is time for all good men to come to the aid of their party! \ldots
 
 \subsection{Interface description}
 
-\image{0.3\textwidth}{../mmc_pins.png}{MMC Interface}{ht}{interface}
+Figure~\ref{fig:interface} shows an MMC card and Table~\ref{tab:interface} describes the pins of the MMC card.
 
-\begin{table}
+\image{0.3\textwidth}{../mmc_pins.png}{MMC Interface}{h}{interface}
+
+\begin{table}[hH]
     \begin{tabular}{|l|l|l|p{8cm}|}
     \hline
 Pin. No.   & Name    & Description	    & Note for our implementation \\ \hline
@@ -77,29 +79,59 @@ Pin. No.   & Name    & Description	    & Note for our implementation \\ \hline
 9	       & DAT2	 & Data	            & Pull up (Voltage via resistor) \\
 	\hline
     \end{tabular}
+    \caption{MMC card pin description}
+    \label{tab:interface}
 \end{table}
-
 
 \subsection{SPI Interface}
 
 The SPI Interface uses two connections to the MMC. First the \emph{master out, slave in} to send commands to the MMC and the \emph{master in, slave out} to receive the results from the MMC. You can see the pins on the MMC in figure \ref{fig:interface}.
 
-\image{0.8\textwidth}{../spi_mmc_command.pdf}{Sending a command to the MMC}{ht}{command}
+\image{0.8\textwidth}{../spi_mmc_command.pdf}{Sending a command to the MMC}{h}{command}
 
-Sending commands requires you to stick to a predefined protocol that we will describe. A basic sequence for one cammand can be found in figure \ref{fig:command}. In figure \ref{fig:init} and \ref{fig:read} you can find the sequence of commands we have to send to the card in order to initialize it or read a block. 
+Sending commands requires you to stick to a predefined protocol that we will describe. A basic sequence for one command can be found in Figure~\ref{fig:command}. In Figure~\ref{fig:init} and~\ref{fig:read} you can find the sequence of commands we have to send to the card in order to initialize it or read a block.
 
-Each command is a binary coded sequence in a format that is defined in the official reference manual. Figure \ref{fig:command} should give you a basic idea of how the communication works. The start byte (SB) consists of 8 times HI (1). Before that, the card only sends 0s. The response token (RT) consists of 8 bits. Each bit indicates a certain error or a successful command. In case the command finished successfully, the card returns \texttt{0000 0001}
+Each command is a binary coded sequence in a format that is defined in the official reference manual. Figure~\ref{fig:command} should give you a basic idea of how the communication works. The start byte (SB) consists of 8 times HI (1). Before that, the card only sends 0s. The response token (RT) consists of 8 bits. Each bit indicates a certain error or a successful command. In case the command finished successfully, the card returns \texttt{0000 0001}.
 
 \subsubsection{Initializing the card}
 
-\image{0.5\textwidth}{../flow_init_mmc.pdf}{Flow for initializing}{ht}{init}
+The MMC cards needs to be initialized before it can be used to read data. According to the specs, one need to send a \texttt{CMD0} and \texttt{CMD1} after at least 74 clock cycles to synchronize the card clock. The initialization process is complete when the card responds with \texttt{0000 0000} (busy) instead of \texttt{0000 0001} (ready).
+
+The whole initialization procedure is shown in Figure~\ref{fig:init}.
+
+\image{0.5\textwidth}{../flow_init_mmc.pdf}{Flow for initializing}{h}{init}
 
 \subsubsection{Reading data}
 
-\image{0.5\textwidth}{../flow_read_mmc.pdf}{Flow for reading}{ht}{read}
+Reading from the MMC card is shown in Figure~\ref{fig:read}. The command \texttt{CMD17} to reads 1 block of data from the MMC card starting at the address specified in the argument field. The size of the block that is read has to be defined with a command \texttt{CMD16} (which is not shown here).
+
+\image{0.5\textwidth}{../flow_read_mmc.pdf}{Flow for reading}{h}{read}
 
 \subsection{Implementation of Communication}
-\image{1.0\textwidth}{../mmc_controller.pdf}{Controller VHDL FSM}{ht}{implementation}
+
+Figure~\ref{fig:implementation} shows the finite state machine of our implementation in VHDL. \texttt{\{n\}} means that the number preceding the brackets is repeated $n$ times.
+
+\image{1.0\textwidth}{../mmc_controller.pdf}{Controller VHDL FSM}{h}{implementation}
+
+\subsection{Most important MMC SPI commands}
+
+Table~\ref{tab:commands} shows the most important command that we used in our implementation.
+
+\begin{table}[hH]
+    \begin{tabular}{|l|l|p{8cm}|}
+    \hline
+Command    & Name                & Description            \\ \hline
+CMD0       & GO\_IDLE\_STATE     & Reset the card. If CS == 0, the card goes into SPI mode. \\
+CMD1       & SEND\_OP\_COND      & initialize the card. The command has to be sent repeatedly until the response changes from \texttt{0000 0000} (busy) to \texttt{0000 0001} (ready). \\
+CMD16      & SET\_BLOCKLEN       & Set the block size. Send the block size as the argument. \\
+CMD17      & READ\_SINGLE\_BLOCK & Read one block as specified in \texttt{CMD16}. Send the start address as the argument. \\
+    \hline
+    \end{tabular}
+    \caption{MMC SPI commands used in this implementation.}
+    \label{tab:commands}
+\end{table}
+
+More details about the SPI commands, responses and timings can be found in the MMC specification.
 
 \listoffigures
 
