@@ -15,10 +15,10 @@ digraph G {
 
 		subgraph master {
 			edge[weight=2]
-			start0 -> mmcs_init_wait 
-			mmcs_init_wait -> mmcs_cmd0 [label="mmc_init_wait_counter = 0"] 
-			mmcs_cmd0 -> mmcs_cmd0_response [label="mmc_cmd0 = \"01{48}\""]
-			mmcs_cmd0_response -> mmcs_cmd1 [label="mmc_receive_rt = \"0{7}1\""] 
+			start0 -> mmcs_init_wait
+			mmcs_init_wait -> mmcs_cmd0 [label="mmc_init_wait_counter = 0"]
+			mmcs_cmd0 -> mmcs_cmd0_response [label="mmc_cmd0 = \"0{48}1\""]
+			mmcs_cmd0_response -> mmcs_cmd1 [label="mmc_receive_rt = \"0{7}1\""]
 			mmcs_cmd1 -> mmcs_cmd1_wait [label="mmc_cmd1 = \"01{48}\""]
 			mmcs_cmd1_wait -> mmcs_cmd16_prepare [label="mmc_cmd1_wait = \"0{8}\""]
 			mmcs_cmd16_prepare -> mmcs_cmd16 [label="mmc_cmd16_wait = \"0{16}\""]
@@ -27,7 +27,7 @@ digraph G {
 			mmcs_ready -> mmcs_ready;
 		}
 
-		//{rank=same; start0 mmcs_init_wait mmcs_cmd0 mmcs_cmd0_response mmcs_cmd1 mmcs_cmd1_wait 
+		//{rank=same; start0 mmcs_init_wait mmcs_cmd0 mmcs_cmd0_response mmcs_cmd1 mmcs_cmd1_wait
 		//	mmcs_cmd16_prepare mmcs_cmd16 mmcs_cmd16_response mmcs_ready}
 
 		subgraph branch {
@@ -56,7 +56,7 @@ digraph G {
 		mmcs_wait_for_start_byte -> mmcs_receive_segments [label="mmc_miso = '0'"]
 		mmcs_receive_segments -> mmcs_receive_crc [label="mmc_segments_read >= MMC_SEGMENTS_TO_READ"]
 
-		//{rank=same; start1 mmcs_reset mcs_wait mmcs_cmd17 mmcs_receive_rt mmcs_wait_for_start_byte 
+		//{rank=same; start1 mmcs_reset mcs_wait mmcs_cmd17 mmcs_receive_rt mmcs_wait_for_start_byte
 		//	mmcs_receive_segments mmcs_receive_crc mmcs_wait}
 
 		edge[weight=1]
