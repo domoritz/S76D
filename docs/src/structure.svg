@@ -13,7 +13,7 @@
    height="1488.189"
    id="svg2"
    version="1.1"
-   inkscape:version="0.48.4 r9939"
+   inkscape:version="0.48.2 r9819"
    sodipodi:docname="structure.svg">
   <defs
      id="defs4">
@@ -305,15 +305,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4142136"
-     inkscape:cx="1826.8944"
-     inkscape:cy="1115.702"
+     inkscape:cx="921.79774"
+     inkscape:cy="1006.764"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
-     inkscape:window-width="1920"
-     inkscape:window-height="1137"
-     inkscape:window-x="-8"
-     inkscape:window-y="-8"
+     inkscape:window-width="1231"
+     inkscape:window-height="756"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
      inkscape:window-maximized="1"
      showguides="true"
      inkscape:guide-bbox="true">
@@ -551,13 +551,13 @@
     <text
        sodipodi:linespacing="125%"
        id="text6005"
-       y="12.362144"
-       x="1660"
+       y="-17.637856"
+       x="1670"
        style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
        xml:space="preserve"><tspan
          style="font-size:20px"
-         y="12.362144"
-         x="1660"
+         y="-17.637856"
+         x="1670"
          sodipodi:role="line"
          id="tspan4996">DAC controller</tspan></text>
     <rect
@@ -1294,9 +1294,9 @@
        x="940"
        y="12.362144" />
     <rect
-       y="-27.637856"
+       y="-47.637856"
        x="1560"
-       height="340"
+       height="360.00003"
        width="480"
        id="rect11112"
        style="fill:none;stroke:#000000;stroke-width:1.25;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:15, 15;stroke-dashoffset:0" />
@@ -1351,21 +1351,21 @@
        id="path11704"
        inkscape:connector-curvature="0" />
     <g
-       transform="translate(990.50101,-810.5859)"
+       transform="translate(970.50101,-810.5859)"
        id="g11896">
       <rect
          style="fill:none;stroke:#000000;stroke-width:1.25;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
          id="rect11898"
-         width="99.999969"
-         height="39.414146"
+         width="119.49899"
+         height="39.999985"
          x="860"
          y="922.94806"
          ry="0" />
       <rect
          style="fill:none;stroke:#000000;stroke-width:1.25;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
          id="rect11900"
-         width="100"
-         height="9.9999981"
+         width="119.49899"
+         height="10.585862"
          x="860"
          y="952.36218" />
       <path
@@ -1423,11 +1423,11 @@
        transform="translate(0,-435.82682)" />
     <path
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow2Mend)"
-       d="m 1700,688.18896 0,-200 110,0"
+       d="m 1700,688.18896 0,-240 104,0 0,20"
        id="path12120"
        inkscape:connector-curvature="0"
        transform="translate(0,-435.82682)"
-       sodipodi:nodetypes="ccc" />
+       sodipodi:nodetypes="cccc" />
     <path
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:none"
        d="m 1740,688.18896 0,-40"
@@ -1527,10 +1527,10 @@
          id="tspan11613">(12 Bit DAC)</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;marker-end:url(#Arrow2Mend)"
-       d="m 1641.5714,301.18896 0.4286,282 208,0"
+       d="m 1641.5714,301.18896 0.4286,282 188,0"
        id="path12540"
        inkscape:path-effect="#path-effect12542"
-       inkscape:original-d="m 1641.5714,301.18896 0.4286,282 208,0"
+       inkscape:original-d="m 1641.5714,301.18896 0.4286,282 188,0"
        inkscape:connector-curvature="0"
        transform="translate(0,-435.82682)"
        sodipodi:nodetypes="ccc" />
@@ -2138,23 +2138,23 @@
        id="rect12025"
        width="140"
        height="40"
-       x="1810"
+       x="1790"
        y="32.362144" />
     <text
        sodipodi:linespacing="125%"
        id="text11106-1"
        y="50.362144"
-       x="1882"
+       x="1862"
        style="font-size:12.56530476px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
        xml:space="preserve"><tspan
          style="font-size:10px;text-align:center;text-anchor:middle"
          y="50.362144"
-         x="1882"
+         x="1862"
          sodipodi:role="line"
          id="tspan11308-3">4-channel Audio Mixer</tspan><tspan
          style="font-size:10px;text-align:center;text-anchor:middle"
          y="62.862144"
-         x="1882"
+         x="1862"
          sodipodi:role="line"
          id="tspan4376">(4x 12bit)</tspan></text>
     <text
@@ -2195,7 +2195,7 @@
        y="-217.63785"
        x="1750"
        height="140"
-       width="220"
+       width="250"
        id="rect11112-5"
        style="fill:none;stroke:#000000;stroke-width:1.25;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:15, 15;stroke-dashoffset:0" />
     <path
@@ -2224,41 +2224,41 @@
     <rect
        style="fill:none;stroke:#000000;stroke-width:1.25;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
        id="rect6009-1"
-       width="199.99991"
-       height="50.000023"
-       x="1526"
-       y="-319.63785" />
+       width="216"
+       height="48.000038"
+       x="1486"
+       y="-317.63785" />
     <text
        xml:space="preserve"
        style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="1540"
+       x="1500"
        y="-287.63785"
        id="text6011-4"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan6013-2"
-         x="1540"
+         x="1500"
          y="-287.63785"
          style="font-size:20px">KeyboardController</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#Arrow2Mstart);marker-end:none"
-       d="m 1924.4914,30.927855 0,-40.0000076"
+       d="m 1910.4914,30.927855 0,-40.0000076"
        id="path12122-3"
        inkscape:connector-curvature="0" />
     <path
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 1919.4914,-9.0721526 c 3,-1.9999964 8,3 10,0 l 0,0"
+       d="m 1905.4914,-9.0721526 c 3,-1.9999964 8,3 10,0 l 0,0"
        id="path12504-2"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccc" />
     <path
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#Arrow2Mstart);marker-end:none"
-       d="m 1879.9914,31.11982 0,-40.0000122"
+       d="m 1871.9914,31.11982 0,-40.0000122"
        id="path12122-3-2"
        inkscape:connector-curvature="0" />
     <path
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 1874.9914,-8.8801922 c 3,-1.9999978 8,3 10,0 l 0,0"
+       d="m 1866.9914,-8.8801922 c 3,-1.9999978 8,3 10,0 l 0,0"
        id="path12504-2-1"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccc" />
@@ -2266,35 +2266,35 @@
        sodipodi:linespacing="125%"
        id="text12518-2-6"
        y="15.862144"
-       x="1862"
+       x="1854"
        style="font-size:12.56530476px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
        xml:space="preserve"><tspan
          style="font-size:10px"
          y="15.862144"
-         x="1862"
+         x="1854"
          id="tspan12520-7-8"
          sodipodi:role="line">12</tspan></text>
     <path
        inkscape:connector-curvature="0"
        id="path12522-6-5"
-       d="m 1875,14.862078 10,-5"
+       d="m 1867,14.862078 10,-5"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
     <text
        sodipodi:linespacing="125%"
        id="text12518-2-6-8"
        y="15.862144"
-       x="1906.25"
+       x="1892.25"
        style="font-size:12.56530476px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
        xml:space="preserve"><tspan
          style="font-size:10px"
          y="15.862144"
-         x="1906.25"
+         x="1892.25"
          id="tspan12520-7-8-9"
          sodipodi:role="line">12</tspan></text>
     <path
        inkscape:connector-curvature="0"
        id="path12522-6-5-2"
-       d="m 1919.25,14.862068 10,-5"
+       d="m 1905.25,14.862068 10,-5"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
     <rect
        y="-147.69849"
@@ -2341,18 +2341,18 @@
     <text
        xml:space="preserve"
        style="font-size:12.56530476px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="1851.2928"
+       x="1833.2928"
        y="123.06924"
        id="text11312-4-2-1"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan11314-8-4-1"
-         x="1851.2928"
+         x="1833.2928"
          y="123.06924"
          style="font-size:10px">Serial</tspan><tspan
          id="tspan11316-8-5-3"
          sodipodi:role="line"
-         x="1851.2928"
+         x="1833.2928"
          y="135.56924"
          style="font-size:10px">Output Buffer (12 bits)</tspan></text>
     <rect
@@ -2376,44 +2376,44 @@
          style="font-size:10px">Wave Generator</tspan></text>
     <rect
        y="-309.63785"
-       x="1793.5"
-       height="30.000008"
-       width="96.5"
+       x="1799.5"
+       height="31.999992"
+       width="116.5"
        id="rect11310-7-2"
        style="fill:none;stroke:#000000;stroke-width:1.25;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
     <text
        xml:space="preserve"
        style="font-size:12.56530476px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="1795"
+       x="1809"
        y="-297.63785"
        id="text11312-9-77"
        sodipodi:linespacing="125%"><tspan
          id="tspan11316-4-9"
          sodipodi:role="line"
-         x="1795"
+         x="1809"
          y="-297.63785"
          style="font-size:10px">Scancode-Tonecode</tspan><tspan
          sodipodi:role="line"
-         x="1795"
+         x="1809"
          y="-285.13785"
          style="font-size:10px"
          id="tspan6544">Converter</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#Arrow2Mstart);marker-end:none"
-       d="m 1792.0888,-294.15036 -5.0657,0 -61.0231,0"
+       d="m 1800,-294.15036 c -24.6667,0 -73.3333,0 -98,0"
        id="path12122-3-8"
        inkscape:connector-curvature="0"
-       sodipodi:nodetypes="ccc" />
+       sodipodi:nodetypes="cc" />
     <text
        sodipodi:linespacing="125%"
        id="text12518-2-6-3-5"
        y="-302.63785"
-       x="1758"
+       x="1752"
        style="font-size:12.56530476px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
        xml:space="preserve"><tspan
          style="font-size:10px"
          y="-302.63785"
-         x="1758"
+         x="1752"
          id="tspan12520-7-8-3-0"
          sodipodi:role="line">8</tspan></text>
     <rect
@@ -2421,7 +2421,7 @@
        id="rect6609"
        width="35.355347"
        height="35.355347"
-       x="1432.3381"
+       x="1392.3381"
        y="-310.25574"
        ry="0" />
     <path
@@ -2433,59 +2433,59 @@
        sodipodi:rx="13.519661"
        sodipodi:ry="13.519661"
        d="m 1418.5197,98.188965 a 13.519661,13.519661 0 1 1 -27.0394,0 13.519661,13.519661 0 1 1 27.0394,0 z"
-       transform="translate(44.992055,-390.84872)" />
+       transform="translate(4.992055,-390.84872)" />
     <path
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#Arrow2Mstart);marker-end:url(#Arrow2Mend-17)"
-       d="m 1525,-292.63786 -56,0"
+       d="m 1485,-292.63786 -56,0"
        id="path12122-3-2-6"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc" />
     <path
        sodipodi:nodetypes="cc"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 1497,-287.63785 5,-10.00004"
+       d="m 1457,-287.63785 5,-10.00004"
        id="path6983-0"
        inkscape:connector-curvature="0" />
     <text
        xml:space="preserve"
        style="font-size:12.56530476px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="1496"
+       x="1456"
        y="-299.63785"
        id="text6985-2"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan6987-4"
-         x="1496"
+         x="1456"
          y="-299.63785"
          style="font-size:10px">3</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:12.56530476px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="1440.4255"
+       x="1400.4255"
        y="-289.06339"
        id="text6985-2-8"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan6987-4-6"
-         x="1440.4255"
+         x="1400.4255"
          y="-289.06339"
          style="font-size:10px">PS2</tspan></text>
     <path
        sodipodi:nodetypes="cc"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 1758.5,-289.13782 5,-10.00004"
+       d="m 1752.5,-289.13782 5,-10.00004"
        id="path6983-0-5"
        inkscape:connector-curvature="0" />
     <text
        sodipodi:linespacing="125%"
        id="text12518-2-6-3-5-0"
        y="-280.63785"
-       x="1733"
+       x="1727"
        style="font-size:12.56530476px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
        xml:space="preserve"><tspan
          style="font-size:10px"
          y="-280.63785"
-         x="1733"
+         x="1727"
          id="tspan12520-7-8-3-0-9"
          sodipodi:role="line">&quot;Scan code&quot;</tspan></text>
     <path
@@ -2532,18 +2532,18 @@
     <text
        sodipodi:linespacing="125%"
        id="text6005-1"
-       y="-197.63785"
-       x="1965"
+       y="-187.63785"
+       x="1980"
        style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
        xml:space="preserve"><tspan
          style="font-size:20px;text-align:end;text-anchor:end"
-         y="-197.63785"
-         x="1965"
+         y="-187.63785"
+         x="1980"
          sodipodi:role="line"
          id="tspan4996-8">Tone</tspan><tspan
          style="font-size:20px;text-align:end;text-anchor:end"
-         y="-172.63785"
-         x="1965"
+         y="-162.63785"
+         x="1980"
          sodipodi:role="line"
          id="tspan7684">Generation</tspan></text>
     <text
